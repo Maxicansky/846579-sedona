@@ -4,6 +4,11 @@
   <head>
    <meta charset="utf-8">
    <title>HTML Academy: Седона</title>
+   <style>
+   .border {
+    border: 3px solid #00af64;
+   }
+   </style>
   </head>
 
   <body>
@@ -11,7 +16,7 @@
   <header class="inner-header">
     <nav class="home-navigation">
      <a class="home-header-logotype">
-      <img src="img/index-logotype.svg" width="90" height="90" alt="Логотип Седона">
+       <img src="img/logo-sedona.svg" width="90" height="90" alt="Логотип Седона">
      </a>
      <ul class="site-navigation">
        <li><a href="info.html">Информация</a></li>
@@ -35,14 +40,14 @@
         <tr>
           <td>
             <p>
-            Басейн
-            <span class="swith visually-hidden"></span>
+              <span class="swith visually-hidden"><img src="img/checkbox-on.svg" class="border"></span>
+              Басейн
             </p>
           </td>
           <td>
            <p>
-             Гостиница
-             <span class="switch"></span>
+              <span class="switch"><img src="img/checkbox-on.svg" class="border"></span>
+              Гостиница
            </p>
          </td>
           <td>
@@ -55,14 +60,14 @@
         <tr>
           <td>
             <p>
+              <span class="switch"><img src="img/checkbox-on.svg" class="border"></span>
               Парковка
-              <span class="switch"></span>
             </p>
           </td>
           <td>
            <p>
+             <span class="switch"><img src="img/checkbox-on.svg" class="border"></span>
              Мотель
-             <span class="switch"></span>
            </p>
          </td>
           <td>
@@ -75,14 +80,14 @@
         <tr>
           <td>
             <p>
+              <span class="switch"><img src="img/checkbox-on.svg" class="border"></span>
               Wi-Fi
-              <span class="switch"></span>
             </p>
           </td>
           <td>
            <p>
+             <span class="switch"><img src="img/checkbox-on.svg" class="border"></span>
              Апартаменты
-             <span class="switch"></span>
            </p>
          </td>
           <td>
@@ -105,7 +110,10 @@
         <p><a class="pick-quality"href="#">По цене</a></p>
         <p><a class="pick-quality"href="#">По типу</a></p>
         <p><a class="pick-quality"href="#">По рейтингу</a></p>
-        <span class="up-down">Х</span>
+        <span class="up-down">
+          <img src="img/icon-up-dir.svg">
+          <img src="img/icon-down-dir.svg">
+        </span>
       </div>
     </section>
     <section>
@@ -113,7 +121,7 @@
         <li class="Amara Resort & Spa">
           <!--Здесь у меня семантическая фантазия кончилась. Для блоков только divы остались-->
           <div class="information-about-hotel">
-           <img src="AR&SPA.jpg" alto="amara resort & spa">
+           <img src="img/AR&SPA.jpg" alto="amara resort & spa">
            <div>
             <h3 class="hotel's-name">Amara Resort & Spa</h3>
             <aside>
@@ -126,17 +134,17 @@
             </aside>
            </div>
            <div>
-            <span class="stars">X</span>
-            <span class="stars">X</span>
-            <span class="stars">X</span>
-            <span class="stars">X</span>
+            <span class="stars"><img src="img/star.svg"></span>
+            <span class="stars"><img src="img/star.svg"></span>
+            <span class="stars"><img src="img/star.svg"></span>
+            <span class="stars"><img src="img/star.svg"></span>
             <p class="rating">Рейтинг: 8,5</p>
            </div>
           </div>
         </li>
         <li>
           <div class="information-about-hotel">
-           <img src="DQINN.jpg" alto="desert qualin inn">
+           <img src="img/DQINN.jpg" alto="desert qualin inn">
            <div>
             <h3 class="hotel's-name">Desert Qualin Inn</h3>
             <aside>
@@ -149,16 +157,16 @@
             </aside>
            </div>
            <div>
-            <span class="stars">X</span>
-            <span class="stars">X</span>
-            <span class="stars">X</span>
+            <span class="stars"><img src="img/star.svg"></span>
+            <span class="stars"><img src="img/star.svg"></span>
+            <span class="stars"><img src="img/star.svg"></span>
             <p class="rating">Рейтинг: 8,9</p>
            </div>
           </div>
         </li>
         <li>
           <div class="information-about-hotel">
-           <img src="VaPDiablo.jpg" alto="villas at poco diablo">
+           <img src="img/VaPDiablo.jpg" alto="villas at poco diablo">
            <div>
             <h3 class="hotel's-name">Villas at poco diablo</h3>
             <aside>
@@ -171,8 +179,8 @@
             </aside>
            </div>
            <div>
-            <span class="stars">X</span>
-            <span class="stars">X</span>
+            <span class="stars"><img src="img/star.svg"></span>
+            <span class="stars"><img src="img/star.svg"></span>
             <p class="rating">Рейтинг: 9,2</p>
            </div>
           </div>
@@ -185,14 +193,14 @@
     <p>#Visitsedona</p>
     <div class="footer-social">
       <ul>
-        <li><a class="social-button" href="#">Twitter</a></li>
-        <li><a class="social-button" href="#">Facebook</a></li>
-        <li><a class="social-button" href="#">Youtube</a></li>
+        <li><a class="social-button" href="#"><img src="img/twitter.svg" class="border" width="90" height="90" alt="Twitter"></a></li>
+        <li><a class="social-button" href="#"><img src="img/fb-icon.svg" class="border" width="90" height="90" alt="Facebook"></a></li>
+        <li><a class="social-button" href="#"><img src="img/youtube.svg" class="border" width="90" height="90" alt="Youtube"></a></li>
       </ul>
     </div>
     <div class="footer-copyright">
         <p>Webside by</p>
-        <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+        <a class="button" href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="90" height="90" alt="HTML Academy"></a>
     </div>
     </footer>
   </body>
