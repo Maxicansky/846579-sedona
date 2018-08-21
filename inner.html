@@ -4,9 +4,10 @@
   <head>
    <meta charset="utf-8">
    <title>HTML Academy: Седона</title>
+   <!--...ну и еще было интересно посмотреть как работает тег <style>-->
    <style>
-   .border {
-    border: 3px solid #00af64;
+   .background-color {
+    background-color: #00af64;
    }
    </style>
   </head>
@@ -20,7 +21,7 @@
      </a>
      <ul class="site-navigation">
        <li><a href="info.html">Информация</a></li>
-       <li><a href="photo&video.html">Фото и видео</a></li>
+       <li><a href="photo-n-video.html">Фото и видео</a></li>
        <li><a href="state's-map.html">Карта штата</a></li>
        <li><a href="hotels.html">Гостиницы</a></li>
      </ul>
@@ -31,6 +32,7 @@
     <h1 class="visually-hidden">Страница поиска</h1>
     <section class="search-query">
       <h2 class="visually-hidden">Запрос на поиск</h2>
+      <!--Понимаю, что это будет форма. В следующем задании переделаю-->
       <table class="search-query-data">
         <tr>
           <th>Инфраструктура:</th>
@@ -40,13 +42,14 @@
         <tr>
           <td>
             <p>
-              <span class="swith visually-hidden"><img src="img/checkbox-on.svg" class="border"></span>
+              <!--Здесь и далее - чекбоксы придется прятать под рисунком. Для этого доп классом - visually-hidden-->
+              <img src="img/checkbox-on.svg" class="background-color visually-hidden">
               Басейн
             </p>
           </td>
           <td>
            <p>
-              <span class="switch"><img src="img/checkbox-on.svg" class="border"></span>
+              <img src="img/checkbox-on.svg" class="background-color visually-hidden">
               Гостиница
            </p>
          </td>
@@ -60,13 +63,13 @@
         <tr>
           <td>
             <p>
-              <span class="switch"><img src="img/checkbox-on.svg" class="border"></span>
+              <img src="img/checkbox-on.svg" class="background-color visually-hidden">
               Парковка
             </p>
           </td>
           <td>
            <p>
-             <span class="switch"><img src="img/checkbox-on.svg" class="border"></span>
+             <img src="img/checkbox-on.svg" class="background-color visually-hidden">
              Мотель
            </p>
          </td>
@@ -80,13 +83,13 @@
         <tr>
           <td>
             <p>
-              <span class="switch"><img src="img/checkbox-on.svg" class="border"></span>
+              <img src="img/checkbox-on.svg" class="background-color visually-hidden">
               Wi-Fi
             </p>
           </td>
           <td>
            <p>
-             <span class="switch"><img src="img/checkbox-on.svg" class="border"></span>
+             <img src="img/checkbox-on.svg" class="background-color visually-hidden">
              Апартаменты
            </p>
          </td>
@@ -110,18 +113,17 @@
         <p><a class="pick-quality"href="#">По цене</a></p>
         <p><a class="pick-quality"href="#">По типу</a></p>
         <p><a class="pick-quality"href="#">По рейтингу</a></p>
-        <span class="up-down">
-          <img src="img/icon-up-dir.svg">
-          <img src="img/icon-down-dir.svg">
-        </span>
+        <!--Пока так. Хотя совершенно непонятно как кнопки будут менять цвет. Видимо через CSS-->
+        <button type="button" name="arrow-up"><img src="img/icon-up-dir.svg"></button>
+        <button type="button" name="arrow-down"><img src="img/icon-down-dir.svg"></button>
       </div>
     </section>
     <section>
       <ul>
-        <li class="Amara Resort & Spa">
+        <li class="Amara Resort and Spa">
           <!--Здесь у меня семантическая фантазия кончилась. Для блоков только divы остались-->
           <div class="information-about-hotel">
-           <img src="img/AR&SPA.jpg" alto="amara resort & spa">
+           <img src="img/AR-n-SPA.jpg" alto="Amara resort and spa">
            <div>
             <h3 class="hotel's-name">Amara Resort & Spa</h3>
             <aside>
@@ -133,11 +135,11 @@
              <a class="booking" href="#">Забронировать</a>
             </aside>
            </div>
-           <div>
-            <span class="stars"><img src="img/star.svg"></span>
-            <span class="stars"><img src="img/star.svg"></span>
-            <span class="stars"><img src="img/star.svg"></span>
-            <span class="stars"><img src="img/star.svg"></span>
+           <div class="stars">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
             <p class="rating">Рейтинг: 8,5</p>
            </div>
           </div>
@@ -156,10 +158,10 @@
              <a class="booking" href="#">Забронировать</a>
             </aside>
            </div>
-           <div>
-            <span class="stars"><img src="img/star.svg"></span>
-            <span class="stars"><img src="img/star.svg"></span>
-            <span class="stars"><img src="img/star.svg"></span>
+           <div class="stars">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
             <p class="rating">Рейтинг: 8,9</p>
            </div>
           </div>
@@ -178,9 +180,9 @@
              <a class="booking" href="#">Забронировать</a>
             </aside>
            </div>
-           <div>
-            <span class="stars"><img src="img/star.svg"></span>
-            <span class="stars"><img src="img/star.svg"></span>
+           <div class="stars">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
             <p class="rating">Рейтинг: 9,2</p>
            </div>
           </div>
@@ -193,9 +195,9 @@
     <p>#Visitsedona</p>
     <div class="footer-social">
       <ul>
-        <li><a class="social-button" href="#"><img src="img/twitter.svg" class="border" width="90" height="90" alt="Twitter"></a></li>
-        <li><a class="social-button" href="#"><img src="img/fb-icon.svg" class="border" width="90" height="90" alt="Facebook"></a></li>
-        <li><a class="social-button" href="#"><img src="img/youtube.svg" class="border" width="90" height="90" alt="Youtube"></a></li>
+        <li><a class="social-button" href="#"><img src="img/twitter.svg" class="background-color" width="90" height="90" alt="Twitter"></a></li>
+        <li><a class="social-button" href="#"><img src="img/fb-icon.svg" class="background-color" width="90" height="90" alt="Facebook"></a></li>
+        <li><a class="social-button" href="#"><img src="img/youtube.svg" class="background-color" width="90" height="90" alt="Youtube"></a></li>
       </ul>
     </div>
     <div class="footer-copyright">

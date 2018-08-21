@@ -4,9 +4,15 @@
   <head>
    <meta charset="utf-8">
    <title>HTML Academy: Седона</title>
+   <!--Фон установлен временно для отладки.
+   Куча рисунков в svg формате имеют белую прорисовку и без фона их не видно.
+   Поскольку исполнение файла я контролирую через загрузку в браузер,
+   под такие рисунки я устанавливаю фон, чтобы было видно
+   правильно ли все подключено. В предыдущей версии до фона я не дотумкал,
+   сделал рамки.-->
    <style>
-   .border {
-    border: 3px solid #00af64;
+   .background-color {
+    background-color: #00af64;
    }
    </style>
   </head>
@@ -30,7 +36,7 @@
     <article class="home-main-slogans">
       <h2 class="visually-hidden">Слоганы</h2>
       <p class="visually-hidden">Welcome to the gorgeous Sedona!Because the Grand Canyon sucks!</p>
-      <img src="img/intro-welcome.svg" class="border" width="270" height="270" alto="Горные виды Седоны со слоганом">
+      <img src="img/intro-welcome.svg" class="background-color" width="270" height="270" alto="Горные виды Седоны со слоганом">
     </article>
     <article class="features">
         <h2 class="visually-hidden">Преимущества</h2>
@@ -43,7 +49,7 @@
         <h4>Настоящий городок</h4>
         <p>-№1-</p>
         <p>Седона - не атракцион для туристов, там течет своя жизнь</p>
-        <img src="img/flag&house.jpg" alt="Муниципальное здание">
+        <img src="img/flag-n-house.jpg" alt="Муниципальное здание">
       </section>
       <ul class="features-others">
         <li class="others">
@@ -114,9 +120,9 @@
     <p>#Visitsedona</p>
     <div class="footer-social">
       <ul>
-        <li><a class="social-button" href="#"><img src="img/twitter.svg" class="border" width="90" height="90" alt="Twitter"></a></li>
-        <li><a class="social-button" href="#"><img src="img/fb-icon.svg" class="border" width="90" height="90" alt="Facebook"></a></li>
-        <li><a class="social-button" href="#"><img src="img/youtube.svg" class="border" width="90" height="90" alt="Youtube"></a></li>
+        <li><a class="social-button" href="#"><img src="img/twitter.svg" class="background-color" width="90" height="90" alt="Twitter"></a></li>
+        <li><a class="social-button" href="#"><img src="img/fb-icon.svg" class="background-color" width="90" height="90" alt="Facebook"></a></li>
+        <li><a class="social-button" href="#"><img src="img/youtube.svg" class="background-color" width="90" height="90" alt="Youtube"></a></li>
       </ul>
     </div>
     <div class="footer-copyright">
