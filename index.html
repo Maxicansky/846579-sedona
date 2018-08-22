@@ -93,27 +93,41 @@
       <h3>Заинтересовались?</h3>
       <p>Укажите предполагаемые даты поездки,и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
       <img src="img/map.png" alt="Карта">
-      <span class="final-offer">
-        <h3>Поиск гостиницы в Седоне</h3>
-              <!-- Тут будет форма
-              <table class="form">
-               <tr>
-                <th>Дата заезда</th>
-                <th>Дата выезда</th>
-                <th>Взрослые</th>
-                <th>Дети</th>
-               </tr>
-               <tr>
-                <td><span class="date-picer"><time datetime="2017-04-24">24 апреля 2017</time></span></td>
-                <td><span class="date-picer"><time datetime="2017-07-04">4 июля 2017</time></span></td>
-                <td><span class="counter-people">2</span></td>
-                <td><span class="counter-people">0</span></td>
-               </tr>
-              </table>
-              -->
-        <span class="final-offer-button">Найти</span>
-      </span>
     </section>
+    <!--
+      Вопросы и пояснения.
+      Картинку с календарем обернул в тег div, чтобы картинка потом жестко с формой внутри дива была связана через css - это реально вообще?
+      Аналогично поступил с плюсом-минусом, но там другая проблема: поля quantity-of-...
+      по логике должны быть полями вывода, но как я понял у них нет id, т.е. их не привязать
+      к label, в это поле нельзя будет вручную ввести цифры и оно должно связываться с формой (вроде). А у нас их два.
+      Короче сделал input type="text", т.к. в number по краю вроде стрелочки идут. Надеюсь js решит проблему связи плюсов-минусов с input.
+    -->
+    <form action="application.js" name="application">
+      <h3>Поиск гостиницы в Седоне</h3>
+      <label for="date-of-entry">Дата заезда</label>
+      <div class="field-calendar">
+        <input type="date" class="date" id="date-of-entry" name="date-of-entry" value="24-04-2017">
+        <image src="img/calendar.png">
+      </div>
+      <label for="date-of-exit">Дата выезда</label>
+      <div class="field-calendar">
+        <input type="date" class="date" id="date-of-exit" name="date-of-exit" value="4-06-2017">
+        <image src="img/calendar.png">
+      </div>
+      <label for="adults">Взрослые</label>
+      <div class="field-adults">
+        <button class="button" name="minus"><image src="img/minus.png" alt="Минусуй"></button>
+        <input type="text" class="quantity-of-adults" id="adults" name="quantity-of-adults" value="0">
+        <button class="button" name="plus"><image src="img/plus.png" alt="Плюсуй"></button>
+      </div>
+      <label for="kids">Дети</label>
+      <div class="field-kids">
+        <button class="button" name="minus"><image src="img/minus.png" alt="Минусуй"></button>
+        <input type="text" class="quantity-of-kids" id="kids" name="quantity-of-kids" value="0">
+        <button class="button" name="plus"><image src="img/plus.png" alt="Плюсуй"></button>
+      </div>
+      <input type="submit" class="find" name="find" value="Найти">
+    </form>
   </main>
 
   <footer class="main-footer">
