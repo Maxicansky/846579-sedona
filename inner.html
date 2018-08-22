@@ -30,78 +30,70 @@
 
   <main class="main-inner">
     <h1 class="visually-hidden">Страница поиска</h1>
-    <section class="search-query">
-      <h2 class="visually-hidden">Запрос на поиск</h2>
-      <!--Понимаю, что это будет форма. В следующем задании переделаю-->
-      <table class="search-query-data">
-        <tr>
-          <th>Инфраструктура:</th>
-          <th>Тип жилья:</th>
-          <th>Стоимость в сутки (р.):</th>
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <!--Здесь и далее - чекбоксы придется прятать под рисунком. Для этого доп классом - visually-hidden-->
-              <img src="img/checkbox-on.svg" class="background-color visually-hidden">
-              Басейн
-            </p>
-          </td>
-          <td>
-           <p>
-              <img src="img/checkbox-on.svg" class="background-color visually-hidden">
-              Гостиница
-           </p>
-         </td>
-          <td>
-           <p>
-             От
-             <span class="label"></span>
-           </p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <img src="img/checkbox-on.svg" class="background-color visually-hidden">
-              Парковка
-            </p>
-          </td>
-          <td>
-           <p>
-             <img src="img/checkbox-on.svg" class="background-color visually-hidden">
-             Мотель
-           </p>
-         </td>
-          <td>
-           <p>
-             До
-             <span class="label"></span>
-           </p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <img src="img/checkbox-on.svg" class="background-color visually-hidden">
-              Wi-Fi
-            </p>
-          </td>
-          <td>
-           <p>
-             <img src="img/checkbox-on.svg" class="background-color visually-hidden">
-             Апартаменты
-           </p>
-         </td>
-          <td>
-           <p>
-             <span class="label">Х</span>
-           </p>
-          </td>
-        </tr>
-      </table>
-      <span class="button-show">Показать</span>
-    </section>
+    <form action="js/inner-application.js" name="inner-application">
+      <h2 class="visually-hidden">Ответьте на вопросы для осуществления поиска</h2>
+      <section class="infrastructure">
+        <h3 class="for-inner-form">Инфраструктура:<h3>
+        <div class="column-for-form">
+          <input type="checkbox" id="checkbox-pool" name="checkbox-pool" class="checkbox visually-hidden">
+          <img src="img/checkbox-on.svg" class="background-color checkbox-on">
+          <!--Атрибут hidden ниже поставил временно, до работы в css-->
+          <img src="img/checkbox-down.svg" class="background-color checkbox-down" hidden>
+          <label for="checkbox-pool">Бассейн</label>
+        </div>
+        <div class="column-for-form">
+          <input type="checkbox" id="checkbox-parking" name="checkbox-parking" class="checkbox visually-hidden">
+          <img src="img/checkbox-on.svg" class="background-color checkbox-on">
+          <!--Атрибут hidden ниже поставил временно, до работы в css-->
+          <img src="img/checkbox-down.svg" class="background-color checkbox-down" hidden>
+          <label for="checkbox-parking">Парковка</label>
+        </div>
+        <div class="column-for-form">
+          <input type="checkbox" id="checkbox-wifi" name="checkbox-wifi" class="checkbox visually-hidden">
+          <img src="img/checkbox-on.svg" class="background-color checkbox-on">
+          <!--Атрибут hidden ниже поставил временно, до работы в css-->
+          <img src="img/checkbox-down.svg" class="background-color checkbox-down" hidden>
+          <label for="checkbox-wifi">Wi-Fi</label>
+        </div>
+      </section>
+      <section class="type-of-housing">
+        <h3 class="for-inner-form">Тип жилья:<h3>
+        <div class="column-for-form">
+          <input type="checkbox" id="checkbox-hotel" name="checkbox-hotel" class="checkbox visually-hidden">
+          <img src="img/checkbox-on.svg" class="background-color checkbox-on">
+          <!--Атрибут hidden ниже поставил временно, до работы в css-->
+          <img src="img/checkbox-down.svg" class="background-color checkbox-down" hidden>
+          <label for="checkbox-hotel">Гостиница</label>
+        </div>
+        <div class="column-for-form">
+          <input type="checkbox" id="checkbox-motel" name="checkbox-motel" class="checkbox visually-hidden">
+          <img src="img/checkbox-on.svg" class="background-color checkbox-on">
+          <!--Атрибут hidden ниже поставил временно, до работы в css-->
+          <img src="img/checkbox-down.svg" class="background-color checkbox-down" hidden>
+          <label for="checkbox-motel">Мотель</label>
+        </div>
+        <div class="column-for-form">
+          <input type="checkbox" id="checkbox-apartment" name="checkbox-apartment" class="checkbox visually-hidden">
+          <img src="img/checkbox-on.svg" class="background-color checkbox-on">
+          <!--Атрибут hidden ниже поставил временно, до работы в css-->
+          <img src="img/checkbox-down.svg" class="background-color checkbox-down" hidden>
+          <label for="checkbox-apartment">Апартаменты</label>
+        </div>
+      </section>
+      <section class="cost-of-day">
+        <h3 class="for-inner-form">Стоимость в сутки (р.):<h3>
+        <div class="column-for-form">
+          <!--Предполагается связка через CSS-->
+          <input type="text" class="min-cost" name="min-cost" value="От">
+          <input type="text" class="max-cost" name="max-cost" value="До"><br>
+          <label for="range-min" class="visually-hidden">Позунок на нижнее значение цены</label>
+          <label for="range-max" class="visually-hidden">Ползунок на верхнее значение цены</label><br>
+          <input type="range" id="range-min" name="range-min" class="range-min">
+          <input type="range" id="range-max" name="range-max" class="range-max">
+        </div>
+      </section>
+      <input type="submit" class="to-show" name="to-show" value="Показать">
+    </form>
     <section class="results-of-search">
       <h2 class="visually-hidden">Результаты поиска</h2>
       <div class="quantity">
