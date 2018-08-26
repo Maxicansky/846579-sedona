@@ -30,58 +30,40 @@
 
   <main class="main-inner">
     <h1 class="visually-hidden">Страница поиска</h1>
-    <form action="js/inner-application.js" name="inner-application">
+    <form action="https://echo.htmlacademy.ru" method="get" name="inner-application">
       <h2 class="visually-hidden">Ответьте на вопросы для осуществления поиска</h2>
-      <section class="infrastructure">
-        <h3 class="for-inner-form">Инфраструктура:<h3>
+      <fieldset class="infrastructure">
+        <legend class="for-inner-form">Инфраструктура:</legend>
         <div class="column-for-form">
           <input type="checkbox" id="checkbox-pool" name="checkbox-pool" class="checkbox visually-hidden">
-          <img src="img/checkbox-on.svg" class="background-color checkbox-on">
-          <!--Атрибут hidden ниже поставил временно, до работы в css-->
-          <img src="img/checkbox-down.svg" class="background-color checkbox-down" hidden>
           <label for="checkbox-pool">Бассейн</label>
         </div>
         <div class="column-for-form">
           <input type="checkbox" id="checkbox-parking" name="checkbox-parking" class="checkbox visually-hidden">
-          <img src="img/checkbox-on.svg" class="background-color checkbox-on">
-          <!--Атрибут hidden ниже поставил временно, до работы в css-->
-          <img src="img/checkbox-down.svg" class="background-color checkbox-down" hidden>
           <label for="checkbox-parking">Парковка</label>
         </div>
         <div class="column-for-form">
           <input type="checkbox" id="checkbox-wifi" name="checkbox-wifi" class="checkbox visually-hidden">
-          <img src="img/checkbox-on.svg" class="background-color checkbox-on">
-          <!--Атрибут hidden ниже поставил временно, до работы в css-->
-          <img src="img/checkbox-down.svg" class="background-color checkbox-down" hidden>
           <label for="checkbox-wifi">Wi-Fi</label>
         </div>
-      </section>
-      <section class="type-of-housing">
-        <h3 class="for-inner-form">Тип жилья:<h3>
+      </fieldset>
+      <fieldset class="type-of-housing">
+        <legend class="for-inner-form">Тип жилья:</legend>
         <div class="column-for-form">
           <input type="checkbox" id="checkbox-hotel" name="checkbox-hotel" class="checkbox visually-hidden">
-          <img src="img/checkbox-on.svg" class="background-color checkbox-on">
-          <!--Атрибут hidden ниже поставил временно, до работы в css-->
-          <img src="img/checkbox-down.svg" class="background-color checkbox-down" hidden>
           <label for="checkbox-hotel">Гостиница</label>
         </div>
         <div class="column-for-form">
           <input type="checkbox" id="checkbox-motel" name="checkbox-motel" class="checkbox visually-hidden">
-          <img src="img/checkbox-on.svg" class="background-color checkbox-on">
-          <!--Атрибут hidden ниже поставил временно, до работы в css-->
-          <img src="img/checkbox-down.svg" class="background-color checkbox-down" hidden>
           <label for="checkbox-motel">Мотель</label>
         </div>
         <div class="column-for-form">
           <input type="checkbox" id="checkbox-apartment" name="checkbox-apartment" class="checkbox visually-hidden">
-          <img src="img/checkbox-on.svg" class="background-color checkbox-on">
-          <!--Атрибут hidden ниже поставил временно, до работы в css-->
-          <img src="img/checkbox-down.svg" class="background-color checkbox-down" hidden>
           <label for="checkbox-apartment">Апартаменты</label>
         </div>
-      </section>
-      <section class="cost-of-day">
-        <h3 class="for-inner-form">Стоимость в сутки (р.):<h3>
+      </fieldset>
+      <fieldset class="cost-of-day">
+        <legend class="for-inner-form">Стоимость в сутки (р.):</legend>
         <div class="column-for-form">
           <!--Предполагается связка через CSS-->
           <input type="text" class="min-cost" name="min-cost" value="От">
@@ -91,7 +73,7 @@
           <input type="range" id="range-min" name="range-min" class="range-min">
           <input type="range" id="range-max" name="range-max" class="range-max">
         </div>
-      </section>
+      </fieldset>
       <input type="submit" class="to-show" name="to-show" value="Показать">
     </form>
     <section class="results-of-search">

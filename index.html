@@ -94,34 +94,27 @@
       <p>Укажите предполагаемые даты поездки,и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
       <img src="img/map.png" alt="Карта">
     </section>
-    <!--
-      Вопросы и пояснения.
-      Картинку с календарем обернул в тег div, чтобы картинка потом жестко с формой внутри дива была связана через css - это реально вообще?
-      Аналогично поступил с плюсом-минусом, но там другая проблема: поля quantity-of-...
-      по логике должны быть полями вывода, но как я понял у них нет id, т.е. их не привязать
-      к label, в это поле нельзя будет вручную ввести цифры и оно должно связываться с формой (вроде). А у нас их два.
-      Короче сделал input type="text", т.к. в number по краю вроде стрелочки идут. Надеюсь js решит проблему связи плюсов-минусов с input.
-    -->
-    <form action="js/home-application.js" name="home-application">
-      <h3>Поиск гостиницы в Седоне</h3>
-      <label for="date-of-entry">Дата заезда</label>
+
+    <form action="https://echo.htmlacademy.ru" method="get" name="home-application">
+      <!--Не понимаю почему здесь ссылка. Может быть она должна быть где-то на домашней странице, и затем переходит на "страницу" с формой?-->
+      <h3><a class="button-search-hotel" href="#">Поиск гостиницы в Седоне</a></h3>
+      <!--Переделал на две кнопки. Не понимаю теперь, как туда данные вводить?-->
       <div class="field-calendar">
-        <input type="date" class="date" id="date-of-entry" name="date-of-entry" value="24-04-2017">
-        <image src="img/calendar.png">
+        <label for="date-of-entry">Дата заезда</label>
+        <button class="button" id="date-of-entry" name="date-of-entry" value="24 апреля 2017">24 апреля 2017<image src="img/calendar.png"></button>
       </div>
-      <label for="date-of-exit">Дата выезда</label>
       <div class="field-calendar">
-        <input type="date" class="date" id="date-of-exit" name="date-of-exit" value="4-06-2017">
-        <image src="img/calendar.png">
+        <label for="date-of-exit">Дата выезда</label>
+        <button class="button" id="date-of-exit" name="date-of-exit" value="4 июня 2017">4 июня 2017<image src="img/calendar.png"></button>
       </div>
-      <label for="adults">Взрослые</label>
       <div class="field-adults">
+        <label for="adults">Взрослые</label>
         <button class="button" name="minus"><image src="img/minus.png" alt="Минусуй"></button>
         <input type="text" class="quantity-of-adults" id="adults" name="quantity-of-adults" value="0">
         <button class="button" name="plus"><image src="img/plus.png" alt="Плюсуй"></button>
       </div>
-      <label for="kids">Дети</label>
       <div class="field-kids">
+        <label for="kids">Дети</label>
         <button class="button" name="minus"><image src="img/minus.png" alt="Минусуй"></button>
         <input type="text" class="quantity-of-kids" id="kids" name="quantity-of-kids" value="0">
         <button class="button" name="plus"><image src="img/plus.png" alt="Плюсуй"></button>
