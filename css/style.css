@@ -1,0 +1,104 @@
+/*
+Этот блок почему-то у меня не сработал. Пришлось многое дублировать.
+Класс .home-navigation тоже не сработал.
+А вот <form> в аналогичном случае сработал.
+Что-то связанное с тонкостями наследования?
+Где туплю?
+
+body {
+  font-family: "PTSans","Arial",sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #000000;
+}
+*/
+
+.navigation {
+  font-family: "PTSans","Arial",sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.super-base-reasons {
+  font-family: "PTSans","Arial",sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.base-reasons {
+  font-family: "PTSans","Arial",sans-serif;
+  font-weight: bold;
+  font-size: 21px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.reasons {
+  font-family: "PTSans","Arial",sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.white-text {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.hashteg-visitsedona {
+  font-family: "PTSans","Arial",sans-serif;
+  font-weight: bold;
+  font-size: 21px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.webside {
+  font-family: "PTSans","Arial",sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: #000000;
+  text-transform: uppercase;
+}
+form {
+  text-transform: uppercase;
+}
+.home-main-slogans {
+  background-color: #7d9dc1;
+  background-image: url("img/background photo.jpg");
+}
+.first-feature,.second-feature  {
+  background-color: #81b3d2;
+}
+.features-sequel {
+  background-color: #eeeeee;
+}
+.button-search-hotel {
+  background-color: #766357;
+}
+.button,.quantity-of-adults,.quantity-of-kids {
+  background-color: #f2f2f2;
+}
+#date-of-entry,#date-of-exit {
+  background-image: url("img/calendar.svg");
+}
+.find {
+  background-color: #81b3d2;
+}
+
+footer {
+  background-color: #f9fbf6;
+}
+.social-button {
+  background-color: #81b3d2;
+}
+
+.visually-hidden {
+  position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}

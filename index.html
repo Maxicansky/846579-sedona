@@ -4,17 +4,7 @@
   <head>
    <meta charset="utf-8">
    <title>HTML Academy: Седона</title>
-   <!--Фон установлен временно для отладки.
-   Куча рисунков в svg формате имеют белую прорисовку и без фона их не видно.
-   Поскольку исполнение файла я контролирую через загрузку в браузер,
-   под такие рисунки я устанавливаю фон, чтобы было видно
-   правильно ли все подключено. В предыдущей версии до фона я не дотумкал,
-   сделал рамки.-->
-   <style>
-   .background-color {
-    background-color: #00af64;
-   }
-   </style>
+   <link rel="stylesheet" href="css/style.css" type="text/css"/>
   </head>
 
   <body>
@@ -23,10 +13,10 @@
     <nav class="home-navigation">
        <img src="img/logo-sedona.svg" width="90" height="90" alt="Логотип Седона">
      <ul class="site-navigation">
-       <li><a href="#">Информация</a></li>
-       <li><a href="#">Фото и видео</a></li>
-       <li><a href="#">Карта штата</a></li>
-       <li><a href="#">Гостиницы</a></li>
+       <li><a class="navigation" href="#">Информация</a></li>
+       <li><a class="navigation" href="#">Фото и видео</a></li>
+       <li><a class="navigation" href="#">Карта штата</a></li>
+       <li><a class="navigation" href="#">Гостиницы</a></li>
      </ul>
     </nav>
   </header>
@@ -36,72 +26,72 @@
     <article class="home-main-slogans">
       <h2 class="visually-hidden">Слоганы</h2>
       <p class="visually-hidden">Welcome to the gorgeous Sedona!Because the Grand Canyon sucks!</p>
-      <img src="img/intro-welcome.svg" class="background-color" width="270" height="270" alto="Горные виды Седоны со слоганом">
+      <img src="img/intro-welcome.svg" width="270" height="270" alto="Горные виды Седоны со слоганом">
     </article>
     <article class="features">
         <h2 class="visually-hidden">Преимущества</h2>
       <section class="features-preamble">
         <h3 class="visually-hidden">Несколько слов о Седоне</h3>
-        <p>Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
-    	  <p>Рассмотрим 5 причин по которым Седона круче, чем Гранд Каньон!</p>
+        <p class="base-reasons">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
+    	  <p class="reasons">Рассмотрим 5 причин по которым Седона круче, чем Гранд Каньон!</p>
       </section>
       <section class="first-feature">
-        <h4>Настоящий городок</h4>
-        <p>-№1-</p>
-        <p>Седона - не атракцион для туристов, там течет своя жизнь</p>
+        <h4 class="base-reasons white-text">Настоящий городок</h4>
+        <p class="reasons white-text">-№1-</p>
+        <p class="reasons white-text">Седона - не атракцион для туристов, там течет своя жизнь</p>
         <img src="img/flag-n-house.jpg" alt="Муниципальное здание">
       </section>
       <ul class="features-others">
         <li class="others">
-          <h4>Жилье</h4>
-          <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+          <h4 class="base-reasons">Жилье</h4>
+          <p class="reasons">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
         </li>
         <li class="others">
-          <h4>Еда</h4>
-          <p>Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
+          <h4 class="base-reasons">Еда</h4>
+          <p class="reasons">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
         </li>
         <li class="others">
-          <h4>Сувениры</h4>
-          <p>Не только китайского, но и местного производства!</p>
+          <h4 class="base-reasons">Сувениры</h4>
+          <p class="reasons">Не только китайского, но и местного производства!</p>
         </li>
       </ul>
       <section class="second-feature">
         <img src="img/bridge.jpg" alt="Мост дьявола">
-        <h4>Там есть мост дьявола</h4>
-        <p>-№2-</p>
-        <p>Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
+        <h4 class="base-reasons white-text">Там есть мост дьявола</h4>
+        <p class="reasons white-text">-№2-</p>
+        <p class="reasons white-text">Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
       </section>
       <ul class="features-sequel">
         <li class="feature-third-type">
-          <h4>Небольшая площадь</h4>
-          <p>-№3-</p>
-          <p>Все достопримечательности находятся очень близко</p>
+          <h4 class="base-reasons">Небольшая площадь</h4>
+          <p class="reasons">-№3-</p>
+          <p class="reasons">Все достопримечательности находятся очень близко</p>
         </li>
         <li class="feature-third-type">
-          <h4>Красивая дорога</h4>
-          <p>-№4-</p>
-          <p>Ехать в Седону из Лас-Вегаса совсем не скучно</p>
+          <h4 class="base-reasons">Красивая дорога</h4>
+          <p class="reasons">-№4-</p>
+          <p class="reasons">Ехать в Седону из Лас-Вегаса совсем не скучно</p>
         </li>
         <li class="feature-third-type">
-          <h4>Мало туристов</h4>
-          <p>-№5-</p>
-          <p>Большинство едет в Гранд-Каньон и толпится там</p>
+          <h4 class="base-reasons">Мало туристов</h4>
+          <p class="reasons">-№5-</p>
+          <p class="reasons">Большинство едет в Гранд-Каньон и толпится там</p>
         </li>
       </ul>
     </article>
     <section class="final">
-      <h3>Заинтересовались?</h3>
-      <p>Укажите предполагаемые даты поездки,и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
+      <h3 class="super-base-reasons">Заинтересовались?</h3>
+      <p class="reasons">Укажите предполагаемые даты поездки,и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
       <img src="img/map.png" alt="Карта">
     </section>
-    <a class="button-search-hotel" href="#">Поиск гостиницы в Седоне</a>
+    <a class="button-search-hotel base-reasons" href="#">Поиск гостиницы в Седоне</a>
     <form action="https://echo.htmlacademy.ru" method="get" name="home-application">
       <div class="field-calendar">
         <label for="date-of-entry">Дата заезда</label>
         <button class="button" id="date-of-entry" name="date-of-entry" value="24 апреля 2017">24 апреля 2017</button>
       </div>
       <div class="field-calendar">
-        <label for="date-of-exit">Дата выезда</label>
+        <label for="C">Дата выезда</label>
         <button class="button" id="date-of-exit" name="date-of-exit" value="4 июня 2017">4 июня 2017</button>
       </div>
       <div class="field-adults">
@@ -116,21 +106,21 @@
         <input type="text" class="quantity-of-kids" id="kids" name="quantity-of-kids" value="0">
         <button class="button" name="plus"><image src="img/plus.png" alt="Плюсуй"></button>
       </div>
-      <input type="submit" class="find" name="find" value="Найти">
+      <input type="submit" class="find base-reasons" name="find" value="Найти">
     </form>
   </main>
 
   <footer class="main-footer">
-    <p>#Visitsedona</p>
+    <p class="hashteg-visitsedona">#Visitsedona</p>
     <div class="footer-social">
       <ul>
-        <li><a class="social-button" href="#"><img src="img/twitter.svg" class="background-color" width="90" height="90" alt="Twitter"></a></li>
-        <li><a class="social-button" href="#"><img src="img/fb-icon.svg" class="background-color" width="90" height="90" alt="Facebook"></a></li>
-        <li><a class="social-button" href="#"><img src="img/youtube.svg" class="background-color" width="90" height="90" alt="Youtube"></a></li>
+        <li class="social-button"><a href="#"><img src="img/twitter.svg" class="" width="90" height="90" alt="Twitter"></a></li>
+        <li class="social-button"><a href="#"><img src="img/fb-icon.svg" class="" width="90" height="90" alt="Facebook"></a></li>
+        <li class="social-button"><a href="#"><img src="img/youtube.svg" class="" width="90" height="90" alt="Youtube"></a></li>
       </ul>
     </div>
     <div class="footer-copyright">
-        <p>Webside by</p>
+        <p class="webside">Webside by</p>
         <a class="button" href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="90" height="90" alt="HTML Academy"></a>
     </div>
     </footer>
