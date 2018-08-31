@@ -13,12 +13,18 @@ body {
 }
 */
 
+/*Рабочее примечание. Ниже селекторы для - index.html */
 .navigation {
   font-family: "PTSans","Arial",sans-serif;
   font-weight: bold;
   font-size: 14px;
   color: #000000;
   text-transform: uppercase;
+}
+.home-main-slogans {
+  background-color: #7d9dc1;
+  background-image: url("../img/background photo.jpg");
+  background-repeat: no-repeat;
 }
 .super-base-reasons {
   font-family: "PTSans","Arial",sans-serif;
@@ -45,6 +51,132 @@ body {
   color: #ffffff;
   text-transform: uppercase;
 }
+.first-feature,.second-feature  {
+  background-color: #81b3d2;
+}
+/*Наверное такое написание не соответствует т.з., но уж больно хочется
+применить полученные знания. Ошибки все равно будут, если потребуется
+введу классы*/
+.features-others li:first-of-type {
+  background-image: url("../img/icon-1.svg");
+  background-repeat: no-repeat;
+}
+.features-others li:nth-of-type(2) {
+  background-image: url("../img/icon-3.svg");
+  background-repeat: no-repeat;
+}
+.features-others li:last-of-type {
+  background-image: url("../img/icon-2.svg");
+  background-repeat: no-repeat;
+}
+.features-sequel {
+  background-color: #eeeeee;
+}
+.button-search-hotel {
+  background-color: #766357;
+}
+form {
+  text-transform: uppercase;
+}
+.button,.quantity-of-adults,.quantity-of-kids {
+  background-color: #f2f2f2;
+}
+#date-of-entry,#date-of-exit {
+  background-image: url("../img/calendar.svg");
+  background-repeat: no-repeat;
+}
+.find {
+  background-color: #81b3d2;
+}
+
+/* Рабочее примечание. Ниже селекторы для inner.html */
+.inner-form {
+  background-color: #586f80;
+  background-image: url("../img/filter background.jpg");
+  background-repeat: no-repeat;
+}
+.for-inner-form {
+  font-family: "PTSans","Arial",sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.column-for-form {
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+}
+.column-for-form,.min-cost,.max-cost {
+  font-family: "PTSans","Arial",sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.quantity {
+  font-family: "PTSans","Arial",sans-serif;
+  font-weight: bold;
+  font-size: 21px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.sort-of,.sort-of h3 {
+  font-family: "PTSans","Arial",sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.pick-quality {
+  font-family: "PTSans","Arial",sans-serif;
+  font-weight: lighter;
+  font-size: 12px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.hotels-name {
+  font-family: "PTSans","Arial",sans-serif;
+  font-weight: bold;
+  font-size: 21px;
+  color: #000000;
+  text-transform: uppercase;
+}
+aside {
+  font-family: "PTSans","Arial",sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.details,.booking {
+  font-family: "PTSans","Arial",sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.details {
+  background-color: #88b7d5;
+}
+.booking {
+  background-color: #766357;
+}
+.rating {
+  font-family: "PTSans","Arial",sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #666666;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+}
+
+/* Рабочее примечание. Ниже идут общие селекторы.*/
+footer {
+  background-color: #f9fbf6;
+}
+.social-button {
+  background-color: #81b3d2;
+}
 .hashteg-visitsedona {
   font-family: "PTSans","Arial",sans-serif;
   font-weight: bold;
@@ -59,39 +191,6 @@ body {
   color: #000000;
   text-transform: uppercase;
 }
-form {
-  text-transform: uppercase;
-}
-.home-main-slogans {
-  background-color: #7d9dc1;
-  background-image: url("img/background photo.jpg");
-}
-.first-feature,.second-feature  {
-  background-color: #81b3d2;
-}
-.features-sequel {
-  background-color: #eeeeee;
-}
-.button-search-hotel {
-  background-color: #766357;
-}
-.button,.quantity-of-adults,.quantity-of-kids {
-  background-color: #f2f2f2;
-}
-#date-of-entry,#date-of-exit {
-  background-image: url("img/calendar.svg");
-}
-.find {
-  background-color: #81b3d2;
-}
-
-footer {
-  background-color: #f9fbf6;
-}
-.social-button {
-  background-color: #81b3d2;
-}
-
 .visually-hidden {
   position: absolute;
 	overflow: hidden;

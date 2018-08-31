@@ -4,33 +4,29 @@
   <head>
    <meta charset="utf-8">
    <title>HTML Academy: Седона</title>
-   <!--...ну и еще было интересно посмотреть как работает тег <style>-->
-   <style>
-   .background-color {
-    background-color: #00af64;
-   }
+   <link rel="stylesheet" href="css/style.css" type="text/css"/>
    </style>
   </head>
 
   <body>
 
   <header class="inner-header">
-    <nav class="home-navigation">
-     <a class="home-header-logotype">
+    <nav class="inner-navigation">
+     <a class="inner-header-logotype">
        <img src="img/logo-sedona.svg" width="90" height="90" alt="Логотип Седона">
      </a>
      <ul class="site-navigation">
-       <li><a href="info.html">Информация</a></li>
-       <li><a href="photo-n-video.html">Фото и видео</a></li>
-       <li><a href="state's-map.html">Карта штата</a></li>
-       <li><a href="hotels.html">Гостиницы</a></li>
+       <li><a class="navigation" href="info.html">Информация</a></li>
+       <li><a class="navigation" href="photo-n-video.html">Фото и видео</a></li>
+       <li><a class="navigation" href="state's-map.html">Карта штата</a></li>
+       <li><a class="navigation" href="hotels.html">Гостиницы</a></li>
      </ul>
     </nav>
   </header>
 
   <main class="main-inner">
     <h1 class="visually-hidden">Страница поиска</h1>
-    <form action="https://echo.htmlacademy.ru" method="get" name="inner-application">
+    <form class="inner-form" action="https://echo.htmlacademy.ru" method="get" name="inner-application">
       <h2 class="visually-hidden">Ответьте на вопросы для осуществления поиска</h2>
       <fieldset class="infrastructure">
         <legend class="for-inner-form">Инфраструктура:</legend>
@@ -64,7 +60,7 @@
       </fieldset>
       <fieldset class="cost-of-day">
         <legend class="for-inner-form">Стоимость в сутки (р.):</legend>
-        <div class="column-for-form">
+        <div class="last-column-for-form">
           <!--Предполагается связка через CSS-->
           <input type="text" class="min-cost" name="min-cost" value="От">
           <input type="text" class="max-cost" name="max-cost" value="До"><br>
@@ -79,8 +75,9 @@
     <section class="results-of-search">
       <h2 class="visually-hidden">Результаты поиска</h2>
       <div class="quantity">
-        <p>Найдено:</p>
+        <p>Найдено:
         <span class="quantity-number">3</span>
+        </p>
       </div>
       <div class="sort-of">
         <h3>Сортировка:</h3>
@@ -166,16 +163,16 @@
   </main>
 
   <footer class="inner-footer">
-    <p>#Visitsedona</p>
+    <p class="hashteg-visitsedona">#Visitsedona</p>
     <div class="footer-social">
       <ul>
-        <li><a class="social-button" href="#"><img src="img/twitter.svg" class="background-color" width="90" height="90" alt="Twitter"></a></li>
-        <li><a class="social-button" href="#"><img src="img/fb-icon.svg" class="background-color" width="90" height="90" alt="Facebook"></a></li>
-        <li><a class="social-button" href="#"><img src="img/youtube.svg" class="background-color" width="90" height="90" alt="Youtube"></a></li>
+        <li class="social-button"><a href="#"><img src="img/twitter.svg"  width="90" height="90" alt="Twitter"></a></li>
+        <li class="social-button"><a href="#"><img src="img/fb-icon.svg"  width="90" height="90" alt="Facebook"></a></li>
+        <li class="social-button"><a href="#"><img src="img/youtube.svg"  width="90" height="90" alt="Youtube"></a></li>
       </ul>
     </div>
     <div class="footer-copyright">
-        <p>Webside by</p>
+        <p class="webside">Webside by</p>
         <a class="button" href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="90" height="90" alt="HTML Academy"></a>
     </div>
     </footer>
