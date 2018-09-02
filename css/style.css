@@ -8,6 +8,31 @@ body {
 }
 
 /*Рабочее примечание. Ниже селекторы для - index.html */
+.home-header {
+  display: flex;
+  flex-direction: column;
+  background-color: #7d9dc1;
+  background-image: url("../img/background photo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  align-items: center;
+}
+.site-navigation {
+  display: flex;
+
+  border-width: 3px;
+  border-color: black;
+  list-style-type: none;
+  justify-content: flex-end;
+  background-color: white;
+
+}
+.logo-sedona {
+  align-self: flex-end;
+  background-color: black;
+  hadding: 0px;
+}
+
 .navigation {
   font-family: "PTSans", "Arial", sans-serif;
   font-weight: bold;
@@ -15,11 +40,15 @@ body {
   color: #000000;
   text-transform: uppercase;
 }
+
+
+/*
 .home-main-slogans {
   background-color: #7d9dc1;
   background-image: url("../img/background photo.jpg");
   background-repeat: no-repeat;
 }
+*/
 .super-base-reasons {
   font-family: "PTSans", "Arial", sans-serif;
   font-weight: bold;
