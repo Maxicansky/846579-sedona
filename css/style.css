@@ -27,7 +27,7 @@ body {
   display: flex;
   flex-direction: row;
   list-style: none;
-  padding: 0; /* Офигеть у ul какой-то padding отрицательный стоит, по крайней мере у Edge*/
+  padding: 0; /* Офигеть у ul какой-то padding стоит, по крайней мере у Edge*/
   justify-content: space-around;
   background-color: white;
   margin-top: 0;
@@ -40,7 +40,6 @@ body {
   width: 140px;
 }
 .navigation {
-  display: inline-block;
   margin: auto;
 }
 .logo-sedona {
@@ -80,13 +79,106 @@ body {
   text-transform: uppercase;
 }
 
-/*
-.home-main-slogans {
-  background-color: #7d9dc1;
-  background-image: url("../img/background photo.jpg");
-  background-repeat: no-repeat;
+.first-feature, .second-feature {
+  display: flex;
+  flex-direction: row;
+  width: 1200px;
+  height: 256px;
 }
-*/
+.text-of-first-feature, .text-of-second-feature {
+  display: flex;
+  width: 400px;
+
+}
+.flag-n-house, .bridge {
+  width: 800px;
+}
+.help {
+  margin: auto;
+}
+.features-others, .features-sequel {
+  display: flex;
+  flex-direction: row;
+  width: 1200px;
+  height: 330px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.others {
+  display: flex;
+  flex-direction: column;
+  background-position: center 60px;
+  align-items: center;
+  padding-top: 155px;
+}
+.feature-third-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 45px;
+  margin-bottom: 0;
+}
+.reasons {
+  text-align: center;
+}
+.final {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1200px;
+  height: 884px;
+  background-color: #cadca8;
+  background-image: url("../img/map.png");
+  background-repeat: no-repeat;
+  background-size: 1718px 748px;
+  background-position: bottom;
+  margin-top: -28px; /* Устранил какой-то разрыв. Откуда он взялся? Ума не приложу.*/
+}
+.interested {
+  width: inherit;
+  height: 294px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding-top: 55px;
+}
+.call-of-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 568px;
+  height: 86px;
+  margin-top: -86px;
+  background-color: #766357;
+}
+.call-of-form .button-search-hotel {
+  color: white;
+  background-color: inherit;
+}
+.index-form {
+  width: 458px;
+  background-color: white;
+  padding: 55px;
+}
+.main-footer, .inner-footer {
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.footer-social ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+}
+.footer-copyright {
+  display: flex;
+  flex-direction: row;
+}
 .super-base-reasons {
   font-family: "PTSans", "Arial", sans-serif;
   font-weight: bold;
@@ -130,9 +222,6 @@ body {
 .features-sequel {
   background-color: #eeeeee;
 }
-.button-search-hotel {
-  background-color: #766357;
-}
 form {
   text-transform: uppercase;
 }
@@ -146,13 +235,133 @@ form {
 .find {
   background-color: #81b3d2;
 }
-
 /* Рабочее примечание. Ниже селекторы для inner.html */
-.inner-form {
-  background-color: #586f80;
+.inner {
   background-image: url("../img/filter background.jpg");
   background-repeat: no-repeat;
 }
+
+.inner-header {
+  width: 1200px;
+  height: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inner-navigation {
+  width: inherit;
+  height: 92px;
+  margin-bottom: -71px;
+  margin-left:0;
+}
+.inner-site-navigation {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0; /* Офигеть у ul какой-то padding стоит, по крайней мере у Edge*/
+  justify-content: space-around;
+  background-color: white;
+  margin-top: 0;
+  height: 56px;
+}
+.inner-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 140px;
+}
+/* Эксперимент - без введения в html дополнительных элементов */
+.inner-menu:nth-child(1), .inner-menu:nth-child(2) {
+  order:-1;
+}
+.inner-menu:nth-child(3), .inner-menu:nth-child(4) {
+  order:1;
+}
+.inner-site-navigation:after {
+  content: "";
+  order: 0;
+  width: 140px;
+}
+/* Прикольно получилось, after-оказывется вообще куда угодно поместить можно */
+.inner-logo-sedona {
+  width: 140px;
+  height: 72px;
+  margin-bottom: 61px;
+}
+.main-inner {
+  width: 1200px;
+}
+.inner-menu .navigation {
+  font-family: "PTSans", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.infrastructure, .type-of-housing {
+  float: left;
+  width: 240px;
+}
+.cost-of-day {
+  float: right;
+  width: 340px;
+}
+.inner-form:after {
+  content:"";
+  display: table;
+  clear: both;
+}
+.results-of-search {
+  width:inherit;
+  height: 88px;
+  background-color: white;
+}
+.quantity, .sort-of {
+  float: left;
+}
+.for-button {
+  float: right;
+}
+.pick-quality {
+  float: left;
+  margin-left: 10px;
+}
+.result-of-choose {
+  width: inherit;
+  height: 452px;
+  background-color: white;
+}
+.listings-of-result {
+  padding: 0;
+  list-style: none;
+}
+.information-about-hotel {
+  display: flex;
+  flex-direct: row;
+  justify-content: space-between;
+}
+.details-about-hotel {
+  display: flex;
+  flex-direct: row;
+  justify-content: space-between;
+}
+.aside-contener {
+  display: table;
+  width: 300px;
+}
+.hotels-name {
+  display: table-caption;
+}
+aside {
+  display: table-row;
+}
+p, a {
+  display: table-cell;
+}
+
+
+
+
 .for-inner-form {
   font-family: "PTSans", "Arial", sans-serif;
   font-weight: bold;

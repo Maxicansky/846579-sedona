@@ -8,20 +8,20 @@
    </style>
   </head>
 
-  <body>
+  <body class="inner">
 
   <header class="inner-header">
     <nav class="inner-navigation">
-     <a class="inner-header-logotype">
-       <img src="img/logo-sedona.svg" width="90" height="90" alt="Логотип Седона">
-     </a>
-     <ul class="site-navigation">
-       <li><a class="navigation" href="info.html">Информация</a></li>
-       <li><a class="navigation" href="photo-n-video.html">Фото и видео</a></li>
-       <li><a class="navigation" href="state's-map.html">Карта штата</a></li>
-       <li><a class="navigation" href="hotels.html">Гостиницы</a></li>
+     <ul class="inner-site-navigation">
+       <li class="inner-menu"><a class="navigation" href="info.html">Информация</a></li>
+       <li class="inner-menu"><a class="navigation" href="photo-n-video.html">Фото и видео</a></li>
+       <li class="inner-menu"><a class="navigation" href="state's-map.html">Карта штата</a></li>
+       <li class="inner-menu"><a class="navigation" href="hotels.html">Гостиницы</a></li>
      </ul>
-    </nav>
+   </nav>
+     <a class="inner-header-logotype" href="#">
+       <img class="inner-logo-sedona" src="img/logo.svg" alt="Логотип Седона">
+     </a>
   </header>
 
   <main class="main-inner">
@@ -68,9 +68,9 @@
           <label for="range-max" class="visually-hidden">Ползунок на верхнее значение цены</label><br>
           <input type="range" id="range-min" name="range-min" class="range-min">
           <input type="range" id="range-max" name="range-max" class="range-max">
+          <input type="submit" class="to-show" name="to-show" value="Показать">
         </div>
       </fieldset>
-      <input type="submit" class="to-show" name="to-show" value="Показать">
     </form>
     <section class="results-of-search">
       <h2 class="visually-hidden">Результаты поиска</h2>
@@ -80,83 +80,83 @@
         </p>
       </div>
       <div class="sort-of">
-        <h3>Сортировка:</h3>
-        <p><a class="pick-quality"href="#">По цене</a></p>
-        <p><a class="pick-quality"href="#">По типу</a></p>
-        <p><a class="pick-quality"href="#">По рейтингу</a></p>
-        <!--Пока так. Хотя совершенно непонятно как кнопки будут менять цвет. Видимо через CSS-->
+        <h3 class="pick-quality">Сортировка:</h3>
+        <p class="pick-quality"><a href="#">По цене</a></p>
+        <p class="pick-quality"><a href="#">По типу</a></p>
+        <p class="pick-quality"><a href="#">По рейтингу</a></p>
+      </div>
+      <div class="for-button">
         <button type="button" name="arrow-up"><img src="img/icon-up-dir.svg"></button>
         <button type="button" name="arrow-down"><img src="img/icon-down-dir.svg"></button>
       </div>
     </section>
-    <section>
-      <ul>
-        <li class="Amara Resort and Spa">
-          <!--Здесь у меня семантическая фантазия кончилась. Для блоков только divы остались-->
-          <div class="information-about-hotel">
-           <img src="img/AR-n-SPA.jpg" alto="Amara resort and spa">
-           <div>
-            <h3 class="hotel's-name">Amara Resort & Spa</h3>
-            <aside>
-             <p>Гостиница</p>
-             <a class="details" href="#">Подробнее</a>
-            </aside>
-            <aside>
-             <p>от 4000 р.</p>
-             <a class="booking" href="#">Забронировать</a>
-            </aside>
-           </div>
-           <div class="stars">
-            <img src="img/star.svg">
-            <img src="img/star.svg">
-            <img src="img/star.svg">
-            <img src="img/star.svg">
-            <p class="rating">Рейтинг: 8,5</p>
-           </div>
+    <section class="result-of-choose">
+      <ul class="listings-of-result">
+        <li class="Amara-Resort-and-Spa information-about-hotel">
+         <div class="details-about-hotel">
+          <img src="img/AR-n-SPA.jpg" alto="Amara resort and spa">
+          <div class="aside-contener">
+          <h3 class="hotels-name">Amara Resort & Spa</h3>
+          <aside>
+           <p>Гостиница</p>
+           <p>от 4000 р.</p>
+          </aside>
+          <aside>
+          <a class="details" href="#">Подробнее</a>
+           <a class="booking" href="#">Забронировать</a>
+          </aside>
           </div>
+         </div>
+         <div class="stars">
+          <img src="img/star.svg">
+          <img src="img/star.svg">
+          <img src="img/star.svg">
+          <img src="img/star.svg">
+          <p class="rating">Рейтинг: 8,5</p>
+         </div>
         </li>
-        <li>
-          <div class="information-about-hotel">
-           <img src="img/DQINN.jpg" alto="desert qualin inn">
-           <div>
-            <h3 class="hotel's-name">Desert Qualin Inn</h3>
-            <aside>
-             <p>Гостиница</p>
-             <a class="details" href="#">Подробнее</a>
-            </aside>
-            <aside>
-             <p>от 3000 р.</p>
-             <a class="booking" href="#">Забронировать</a>
-            </aside>
-           </div>
-           <div class="stars">
-            <img src="img/star.svg">
-            <img src="img/star.svg">
-            <img src="img/star.svg">
-            <p class="rating">Рейтинг: 8,9</p>
-           </div>
+        <li class="Desert-Qualin-Inn information-about-hotel">
+         <div class="details-about-hotel">
+          <img src="img/DQINN.jpg" alto="desert qualin inn">
+          <div class="aside-contener">
+          <h3 class="hotels-name">Desert Qualin Inn</h3>
+          <aside>
+           <p>Гостиница</p>
+           <p>от 3000 р.</p>
+          </aside>
+          <aside>
+           <a class="details" href="#">Подробнее</a>
+           <a class="booking" href="#">Забронировать</a>
+          </aside>
           </div>
+         </div>
+         <div class="stars">
+          <img src="img/star.svg">
+          <img src="img/star.svg">
+          <img src="img/star.svg">
+          <p class="rating">Рейтинг: 8,9</p>
+         </div>
         </li>
-        <li>
-          <div class="information-about-hotel">
-           <img src="img/VaPDiablo.jpg" alto="villas at poco diablo">
-           <div>
-            <h3 class="hotel's-name">Villas at poco diablo</h3>
-            <aside>
-             <p>Гостиница</p>
-             <a class="details" href="#">Подробнее</a>
-            </aside>
-            <aside>
-             <p>от 2000 р.</p>
-             <a class="booking" href="#">Забронировать</a>
-            </aside>
-           </div>
-           <div class="stars">
-            <img src="img/star.svg">
-            <img src="img/star.svg">
-            <p class="rating">Рейтинг: 9,2</p>
-           </div>
+        <li class="Villas-at-poco-diablo information-about-hotel">
+         <div class="details-about-hotel">
+          <img src="img/VaPDiablo.jpg" alto="villas at poco diablo">
+          <div class="aside-contener">
+          <h3 class="hotels-name">Villas at poco diablo</h3>
+          <aside>
+           <p>Гостиница</p>
+           <p>от 2000 р.</p>
+          </aside>
+          <aside>
+           <a class="details" href="#">Подробнее</a>
+           <a class="booking" href="#">Забронировать</a>
+          </aside>
           </div>
+         </div>
+         <div class="stars">
+          <img src="img/star.svg">
+          <img src="img/star.svg">
+          <p class="rating">Рейтинг: 9,2</p>
+         </div>
         </li>
       </ul>
     </section>
