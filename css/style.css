@@ -5,14 +5,15 @@ body {
   color: #000000;
 }
 /*Рабочее примечание. Ниже селекторы для - index.html */
+
 .home-header {
   width: 1200px;
-  height: 800px;
+  height: 571px;
   background-color: #7d9dc1;
   background-image: url("../img/background photo.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,7 +28,7 @@ body {
   display: flex;
   flex-direction: row;
   list-style: none;
-  padding: 0; /* Офигеть у ul какой-то padding стоит, по крайней мере у Edge*/
+  padding: 0;
   justify-content: space-around;
   background-color: white;
   margin-top: 0;
@@ -59,18 +60,6 @@ body {
   background-repeat: no-repeat;
 
 }
-.features-preamble {
-  margin-top: -1px;
-  width: inherit;
-  height: 216px;
-  background-color: white;
-}
-.why {
-  margin: auto;
-  margin-top: 55px;
-
-  text-align: center;
-}
 .navigation {
   font-family: "PTSans", "Arial", sans-serif;
   font-weight: bold;
@@ -79,6 +68,25 @@ body {
   text-transform: uppercase;
 }
 
+.home-main {
+  width: 1200px;
+
+}
+.features-preamble {
+  margin-top: 0;
+  width: inherit;
+  height: 216px;
+
+}
+.why {
+  width: inherit;
+  height: inherit;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: white;
+}
 .first-feature, .second-feature {
   display: flex;
   flex-direction: row;
@@ -114,6 +122,7 @@ body {
 }
 .feature-third-type {
   display: flex;
+  hight: 256px;
   flex-direction: column;
   align-items: center;
   padding-top: 45px;
@@ -133,11 +142,10 @@ body {
   background-repeat: no-repeat;
   background-size: 1718px 748px;
   background-position: bottom;
-  margin-top: -28px; /* Устранил какой-то разрыв. Откуда он взялся? Ума не приложу.*/
 }
 .interested {
   width: inherit;
-  height: 294px;
+  height: 292px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -258,7 +266,7 @@ form {
   display: flex;
   flex-direction: row;
   list-style: none;
-  padding: 0; /* Офигеть у ul какой-то padding стоит, по крайней мере у Edge*/
+  padding: 0;
   justify-content: space-around;
   background-color: white;
   margin-top: 0;
@@ -270,7 +278,7 @@ form {
   justify-content: space-around;
   width: 140px;
 }
-/* Эксперимент - без введения в html дополнительных элементов */
+
 .inner-menu:nth-child(1), .inner-menu:nth-child(2) {
   order:-1;
 }
@@ -282,7 +290,7 @@ form {
   order: 0;
   width: 140px;
 }
-/* Прикольно получилось, after-оказывется вообще куда угодно поместить можно */
+
 .inner-logo-sedona {
   width: 140px;
   height: 72px;
