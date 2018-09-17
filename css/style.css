@@ -12,8 +12,8 @@ body {
   background-color: #7d9dc1;
   background-image: url("../img/background photo.jpg");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: 0px -20px;
+  background-size: 1200px 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,6 +42,7 @@ body {
 }
 .navigation {
   margin: auto;
+  text-decoration: none;
 }
 .logo-sedona {
   width: 140px;
@@ -54,11 +55,10 @@ body {
 .polygon {
   width: inherit;
   height: 59px;
-
   background-image: url("../img/polygon.svg");
-
   background-repeat: no-repeat;
-
+  background-size: 1201px 59px;
+  background-position: -1px 0px;
 }
 .navigation {
   font-family: "PTSans", "Arial", sans-serif;
@@ -67,25 +67,29 @@ body {
   color: #000000;
   text-transform: uppercase;
 }
-
 .home-main {
   width: 1200px;
-
 }
 .features-preamble {
   margin-top: 0;
   width: inherit;
   height: 216px;
-
 }
 .why {
   width: inherit;
-  height: inherit;
+  height: 216;
   margin: 0px;
   display: flex;
   flex-direction: column;
   text-align: center;
   background-color: white;
+  padding-top: 55px;
+}
+.about-sedona {
+  margin: 0;
+}
+.about-sedona:nth-child(2) {
+  margin-bottom: 35px;
 }
 .first-feature, .second-feature {
   display: flex;
@@ -95,62 +99,130 @@ body {
 }
 .text-of-first-feature, .text-of-second-feature {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
   width: 400px;
-
+  padding-top: 45px;
+  padding-bottom: 60px;
 }
-.flag-n-house, .bridge {
+.real-town, .diablo, .last-reasons{
+  margin: 0;
+}
+.real-town.base-reasons, .diablo.base-reasons, .last-reasons.base-reasons {
+  width: 175px;
+}
+.real-town.reasons {
+  width: 330px;
+  line-height: 1.6;
+}
+.diablo.reasons {
+  width: 335px;
+  line-height: 1.6;
+}
+.last-reasons.reasons {
+  width: 295px;
+  line-height: 1.6;
+}
+.one-point {
+  width: 330px;
+  line-height: 1.6;
+}
+.flag-n-house {
   width: 800px;
+  height: inherit;
+  background-image: url("../img/flag-n-house.jpg");
+  background-repeat: no-repeat;
+  background-size: 800px 401px;
+  background-position: 0 -72px;
 }
-.help {
-  margin: auto;
+.bridge {
+  width: 800px;
+  height: inherit;
+  background-image: url("../img/bridge.jpg");
+  background-repeat: no-repeat;
+  background-size: 800px 401px;
+  background-position: 0 -72px;
 }
-.features-others, .features-sequel {
+.features-others {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   width: 1200px;
-  height: 330px;
+  height: 333px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.features-sequel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 1200px;
+  height: 256px;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 .others {
   display: flex;
+  box-sizing: border-box;
+  height: 334px;
   flex-direction: column;
   background-position: center 60px;
+  justify-content: space-between;
   align-items: center;
+  text-align: center;
   padding-top: 155px;
+  padding-bottom: 85px;
+  margin: 0;
+}
+.points, .one-point {
+  margin: 0;
 }
 .feature-third-type {
   display: flex;
-  hight: 256px;
+  hight: inherit;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  padding-top: 45px;
-  margin-bottom: 0;
-}
-.reasons {
   text-align: center;
+  padding-top: 45px;
+  padding-bottom: 65px;
+  margin-bottom: 0;
 }
 .final {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 1200px;
-  height: 884px;
+  height: 764px;
   background-color: #cadca8;
   background-image: url("../img/map.png");
   background-repeat: no-repeat;
   background-size: 1718px 748px;
-  background-position: bottom;
+  background-position: -259px 137px;
 }
 .interested {
+  box-sizing: border-box;
   width: inherit;
   height: 292px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  text-align: center;
   background-color: white;
-  padding-top: 55px;
+  padding-top: 52px;
+  padding-bottom: 138px;
+}
+.interested>.reasons {
+  margin: 0;
+  line-height: 1.6;
+}
+.super-base-reasons {
+  margin: 0;
 }
 .call-of-form {
   display: flex;
@@ -165,27 +237,88 @@ body {
 .call-of-form .button-search-hotel {
   color: white;
   background-color: inherit;
+  text-decoration: none;
 }
 .index-form {
   width: 458px;
   background-color: white;
   padding: 55px;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/* Оказывается я не совсем понял как делать выпадающее меню. Пока так. */
+.final:hover .index-form {
+  width: 458px;
+  background-color: white;
+  padding: 55px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.field-calendar {
+  width: 458px;
+  height: 38px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 38px;
+  margin-bottom: 30px;
 }
 .main-footer, .inner-footer {
   width: 1200px;
+  height: 120px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  text-align: center;
+  align-items: center;
+}
+.hashteg, .footer-social, .footer-copyright {
+  width: 220px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.social-button {
+  position: relative;
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+}
+.social-button:last-child {
+  margin: 0;
+}
+.social-image {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 25%;
+  padding: 0;
+}
+.html-image {
+  width: 120px;
+  height: 40px;
+  background-color: inherit;
 }
 .footer-social ul {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
+
 .footer-copyright {
   display: flex;
   flex-direction: row;
+  justify-content: middle;
+  text-align: center;
+  align-items: center;
 }
 .super-base-reasons {
   font-family: "PTSans", "Arial", sans-serif;
@@ -239,9 +372,41 @@ form {
 #date-of-entry, #date-of-exit {
   background-image: url("../img/calendar.svg");
   background-repeat: no-repeat;
+  width: 346px;
+  height: 38px;
+  margin-bottom: 29px;
+  border: none;
+}
+.field-adults, .field-kids {
+  display: inline-block;
+  margin-bottom: 29px;
+}
+#adults, #kids {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  margin: 0;
+  margin-right: -5px;
+  border: none;
+}
+#adults-minus, #adults-plus, #kids-minus, #kids-plus {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  margin: 0;
+  margin-right: -5px;
+  /* Здесь вопрос у меня есть. Я паддинги убрал, марджины убрал,
+  а кнопки без отрицательных марджинов не слиплись. Почему? */
+  border: none;
+}
+#kids-plus {
+  margin: 0;
 }
 .find {
   background-color: #81b3d2;
+  width: 458px;
+  height: 58px;
+  border: none;
 }
 /* Рабочее примечание. Ниже селекторы для inner.html */
 .inner {
@@ -447,7 +612,7 @@ aside {
 
 /* Рабочее примечание. Ниже идут общие селекторы.*/
 footer {
-  background-color: #f9fbf6;
+  background-color: #f2f2f2;
 }
 .social-button {
   background-color: #81b3d2;
