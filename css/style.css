@@ -22,26 +22,32 @@ body {
   width: inherit;
   height: 72px;
   margin-bottom: -72px;
-  margin-left:0;
 }
 .site-navigation {
   display: flex;
   flex-direction: row;
   list-style: none;
   padding: 0;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: white;
   margin-top: 0;
   height: 56px;
+  padding-left: 72px;
+  padding-right: 72px;
 }
 .menu {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  width: 140px;
+  width: 264px;
+  align-items: center;
+}
+.menu:first-child, .menu:nth-child(2) {
+  justify-content: flex-start;
+}
+.menu:nth-child(3), .menu:last-child  {
+  justify-content: flex-end;
 }
 .navigation {
-  margin: auto;
   text-decoration: none;
 }
 .logo-sedona {
@@ -131,7 +137,7 @@ body {
 }
 .flag-n-house {
   width: 800px;
-  height: inherit;
+  min-height: 256px;
   background-image: url("../img/flag-n-house.jpg");
   background-repeat: no-repeat;
   background-size: 800px 401px;
@@ -139,7 +145,7 @@ body {
 }
 .bridge {
   width: 800px;
-  height: inherit;
+  min-height: 256px;
   background-image: url("../img/bridge.jpg");
   background-repeat: no-repeat;
   background-size: 800px 401px;
@@ -183,7 +189,7 @@ body {
 }
 .feature-third-type {
   display: flex;
-  hight: inherit;
+  min-height: 0px;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -234,21 +240,19 @@ body {
   margin-top: -86px;
   background-color: #766357;
 }
-.call-of-form .button-search-hotel {
-  color: white;
-  background-color: inherit;
+.button-search-hotel {
   text-decoration: none;
 }
-.index-form {
-  width: 458px;
-  background-color: white;
-  padding: 55px;
-  display: none;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.call-of-form:hover {
+  background-color: #604e43;
 }
-/* Оказывается я не совсем понял как делать выпадающее меню. Пока так. */
-.final:hover .index-form {
+.call-of-form:active {
+  background-color: #503e33;
+}
+.call-of-form:active .button-search-hotel {
+  color: #7e7068;
+}
+.index-form {
   width: 458px;
   background-color: white;
   padding: 55px;
@@ -257,13 +261,97 @@ body {
   justify-content: space-between;
 }
 .field-calendar {
+  display: flex;
+  position: relative;
   width: 458px;
   height: 38px;
-  display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   line-height: 38px;
+  /* В этом месте у меня нет понимания абслолютно. Центровка текса в label
+  достигается только таким образом. Был еще работающий вариант: я сделал высоту у label и
+  топ-паддингом двигал контент внутри label, но это, по-моему, неправильно.
+  Я думал align-items или vertical-align должны сработать.*/
+  /* И есть еще один вопрос. Я вроде бы все размеры касающиеся формы выставил
+  по макету, и шрифт в том числе, но на дизайн не похоже.
+  Прежде всего, отступы от текста до кнопки.*/
   margin-bottom: 30px;
+}
+.button, .quantity-of-adults, .quantity-of-kids {
+  background-color: #f2f2f2;
+}
+.date-of-entry, .date-of-exit {
+  width: 331px;
+  height: 38px;
+  margin-bottom: 29px;
+  padding-left: 15px;
+  border: none;
+  background-color: #f2f2f2;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.field-calendar:after {
+  content: "";
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  background-image: url("../img/calendar.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: 8px;
+  top: 8px;
+  opacity: 0.5;
+}
+.field-adults, .field-kids {
+  display: flex;
+  margin-bottom: 29px;
+  line-height: 38px;
+}
+label[for="date-of-entry"], label[for="date-of-entry"] {
+  font-size: 14px;
+}
+label[for="kids"], label[for="adults"] {
+  margin-right: 25px;
+  font-size: 14px;
+}
+.quantity-of-adults, .quantity-of-kids {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  margin: 0;
+  margin-right: 0px;
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
+.adults-minus, .adults-plus, .kids-minus, .kids-plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  margin: 0;
+  margin-right: 0px;
+  border: none;
+  background-color: #f2f2f2;
+}
+.find {
+  background-color: #81b3d2;
+  width: 458px;
+  height: 58px;
+  border: none;
+}
+.find:hover {
+  background-color: #669ec0;
+}
+.find:active {
+  background-color: #5496bd;
+  color: #83b3cf;
 }
 .main-footer, .inner-footer {
   width: 1200px;
@@ -282,28 +370,6 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-.social-button {
-  position: relative;
-  margin-right: 10px;
-  width: 50px;
-  height: 50px;
-}
-.social-button:last-child {
-  margin: 0;
-}
-.social-image {
-  position: absolute;
-  width: 50%;
-  height: 50%;
-  top: 25%;
-  left: 25%;
-  padding: 0;
-}
-.html-image {
-  width: 120px;
-  height: 40px;
-  background-color: inherit;
-}
 .footer-social ul {
   display: flex;
   flex-direction: row;
@@ -312,7 +378,55 @@ body {
   padding: 0;
   margin: 0;
 }
-
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: #5496bd;
+}
+.social-button a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #81b3d2;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: #81b3d2;
+}
+.social-button:first-child a {
+  background-size: 50%;
+  background-image: url("../img/twitter.svg");
+}
+.social-button:nth-child(2) a {
+  background-size: 30%;
+  background-image: url("../img/fb-icon.svg");
+}
+.social-button:last-child a {
+  background-size: 50%;
+  background-image: url("../img/youtube.svg");
+  margin: 0;
+}
+.social-button a:hover {
+  background-color: #669ec0;
+}
+.social-button a:active, .social-button a:focus {
+  background-color: #5496bd;
+  opacity: 0.3;
+}
+.html-image {
+  width: 120px;
+  height: 40px;
+  background-color: inherit;
+}
+.into-the-academy:hover path {
+  fill: #81b3d2;
+}
+.into-the-academy:active path, .into-the-academy:focus path {
+  fill: #cccacb;
+}
 .footer-copyright {
   display: flex;
   flex-direction: row;
@@ -366,48 +480,7 @@ body {
 form {
   text-transform: uppercase;
 }
-.button, .quantity-of-adults, .quantity-of-kids {
-  background-color: #f2f2f2;
-}
-#date-of-entry, #date-of-exit {
-  background-image: url("../img/calendar.svg");
-  background-repeat: no-repeat;
-  width: 346px;
-  height: 38px;
-  margin-bottom: 29px;
-  border: none;
-}
-.field-adults, .field-kids {
-  display: inline-block;
-  margin-bottom: 29px;
-}
-#adults, #kids {
-  width: 38px;
-  height: 38px;
-  padding: 0;
-  margin: 0;
-  margin-right: -5px;
-  border: none;
-}
-#adults-minus, #adults-plus, #kids-minus, #kids-plus {
-  width: 38px;
-  height: 38px;
-  padding: 0;
-  margin: 0;
-  margin-right: -5px;
-  /* Здесь вопрос у меня есть. Я паддинги убрал, марджины убрал,
-  а кнопки без отрицательных марджинов не слиплись. Почему? */
-  border: none;
-}
-#kids-plus {
-  margin: 0;
-}
-.find {
-  background-color: #81b3d2;
-  width: 458px;
-  height: 58px;
-  border: none;
-}
+
 /* Рабочее примечание. Ниже селекторы для inner.html */
 .inner {
   background-image: url("../img/filter background.jpg");
@@ -614,9 +687,6 @@ aside {
 footer {
   background-color: #f2f2f2;
 }
-.social-button {
-  background-color: #81b3d2;
-}
 .hashteg-visitsedona {
   font-family: "PTSans", "Arial", sans-serif;
   font-weight: bold;
@@ -624,7 +694,7 @@ footer {
   color: #000000;
   text-transform: uppercase;
 }
-.webside {
+.website {
   font-family: "PTSans", "Arial", sans-serif;
   font-weight: normal;
   font-size: 14px;
