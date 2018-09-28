@@ -1,5 +1,5 @@
 body {
-  font-family: "PTSans", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 14px;
   color: #000000;
@@ -18,10 +18,13 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.home-navigation {
+
+/* Блок для навигации однинаковый для index и inner*/
+.home-navigation, .inner-navigation {
   width: inherit;
   height: 72px;
   margin-bottom: -72px;
+  background-color: transparent;
 }
 .site-navigation {
   display: flex;
@@ -48,8 +51,15 @@ body {
   justify-content: flex-end;
 }
 .navigation {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #000000;
+  text-transform: uppercase;
   text-decoration: none;
 }
+/* Блок навигации окончание */
+
 .logo-sedona {
   width: 140px;
   height: 72px;
@@ -65,13 +75,6 @@ body {
   background-repeat: no-repeat;
   background-size: 1201px 59px;
   background-position: -1px 0px;
-}
-.navigation {
-  font-family: "PTSans", "Arial", sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-  color: #000000;
-  text-transform: uppercase;
 }
 .home-main {
   width: 1200px;
@@ -245,6 +248,7 @@ body {
 }
 .call-of-form:hover {
   background-color: #604e43;
+  cursor: pointer;
 }
 .call-of-form:active {
   background-color: #503e33;
@@ -269,7 +273,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   line-height: 38px;
-  /* В этом месте у меня нет понимания абслолютно. Центровка текса в label
+  /* В этом месте у меня нет понимания абсолютно. Центровка текса в label
   достигается только таким образом. Был еще работающий вариант: я сделал высоту у label и
   топ-паддингом двигал контент внутри label, но это, по-моему, неправильно.
   Я думал align-items или vertical-align должны сработать.*/
@@ -348,6 +352,7 @@ label[for="kids"], label[for="adults"] {
 }
 .find:hover {
   background-color: #669ec0;
+  cursor: pointer;
 }
 .find:active {
   background-color: #5496bd;
@@ -411,6 +416,7 @@ label[for="kids"], label[for="adults"] {
 }
 .social-button a:hover {
   background-color: #669ec0;
+  cursor: pointer;
 }
 .social-button a:active, .social-button a:focus {
   background-color: #5496bd;
@@ -423,6 +429,7 @@ label[for="kids"], label[for="adults"] {
 }
 .into-the-academy:hover path {
   fill: #81b3d2;
+  cursor: pointer;
 }
 .into-the-academy:active path, .into-the-academy:focus path {
   fill: #cccacb;
@@ -435,21 +442,21 @@ label[for="kids"], label[for="adults"] {
   align-items: center;
 }
 .super-base-reasons {
-  font-family: "PTSans", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 28px;
   color: #000000;
   text-transform: uppercase;
 }
 .base-reasons {
-  font-family: "PTSans", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 21px;
   color: #000000;
   text-transform: uppercase;
 }
 .reasons {
-  font-family: "PTSans", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: normal;
   font-size: 14px;
   color: #000000;
@@ -483,52 +490,28 @@ form {
 
 /* Рабочее примечание. Ниже селекторы для inner.html */
 .inner {
+  position: relative;
+}
+.inner:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1200px;
+  height: 800px;
   background-image: url("../img/filter background.jpg");
   background-repeat: no-repeat;
+  background-size: 1200px;
+  top: 0;
+  z-index: -1;
 }
-
 .inner-header {
   width: 1200px;
   height: 72px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: transparent;
 }
-.inner-navigation {
-  width: inherit;
-  height: 92px;
-  margin-bottom: -71px;
-  margin-left:0;
-}
-.inner-site-navigation {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  padding: 0;
-  justify-content: space-around;
-  background-color: white;
-  margin-top: 0;
-  height: 56px;
-}
-.inner-menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 140px;
-}
-
-.inner-menu:nth-child(1), .inner-menu:nth-child(2) {
-  order:-1;
-}
-.inner-menu:nth-child(3), .inner-menu:nth-child(4) {
-  order:1;
-}
-.inner-site-navigation:after {
-  content: "";
-  order: 0;
-  width: 140px;
-}
-
 .inner-logo-sedona {
   width: 140px;
   height: 72px;
@@ -536,21 +519,184 @@ form {
 }
 .main-inner {
   width: 1200px;
+  background-color: transparent;
 }
-.inner-menu .navigation {
-  font-family: "PTSans", "Arial", sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-  color: #000000;
-  text-transform: uppercase;
+.inner-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 202px;
+  padding-top: 10px;
+  padding-right: 73px;
+  /* Здесь, я не понимаю, почему padding не меняет ширину формы */
+  padding-left: 73px;
 }
-.infrastructure, .type-of-housing {
-  float: left;
-  width: 240px;
+.infrastructure, .type-of-housing, .cost-of-day {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: right;
+  width: 256px;
+  margin: 0;
+  padding:0;
+  border: none;
+}
+.for-inner-form, .column-for-form {
+  margin-bottom: 26px;
+}
+.for-inner-form {
+  margin-left: 0;
+  padding-left: 0;
+}
+.column-for-form label{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.column-for-form label:before {
+  content: "";
+  display: block;
+  width: 27px;
+  height: 27px;
+  background-image: url("../img/checkbox-off.png");
+  background-repeat: no-repeat;
+  background-size: 90%;
+  margin-right: 13px;
+}
+.column-for-form input:checked + label:before {
+  content: "";
+  background-image: url("../img/checkbox-on.png");
+  background-size: 100% 90%;
+}
+.column-for-form label:hover {
+  cursor: pointer;
 }
 .cost-of-day {
-  float: right;
   width: 340px;
+  margin-left: auto;
+  border: none;
+}
+.cost-of-day .for-inner-form {
+  margin-bottom: 9px;
+}
+.from-and-to {
+  width: 340px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 32px;
+  margin-bottom: 20px;
+  border: 2px solid white;
+  border-radius: 2px;
+}
+.from-and-to:before {
+  content: "";
+  display: block;
+  order: 1;
+  width: 2px;
+  height: 23px;
+  background-color: white;
+}
+.help-container:first-child {
+  box-sizing: border-box;
+  order: 0;
+  width: 169px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 65px;
+}
+.help-container:last-child {
+  box-sizing: border-box;
+  order: 2;
+  width: 169px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 56px;
+}
+.help-container label {
+  margin-right: 4px;
+}
+.min-cost, .max-cost {
+  width: 50px;
+  background: none;
+  border: none;
+}
+.two-line-for-range {
+  position: relative;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 32px;
+}
+.two-line-for-range:before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 248px;
+  background-color: white;
+}
+.range-min, .range-max {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 20px;
+}
+.range-min:after, .range-max:after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: black;
+  border-radius: 5px;
+  opacity: 0.3;
+}
+.range-min {
+  top: -10px;
+  left: 0px;
+}
+.range-max {
+  top: -10px;
+  left: 238px;
+}
+.range-min:hover {
+  left: -1px;
+  top: -11px;
+  width: 22px;
+  height: 22px;
+  border-radius: 22px;
+  cursor: pointer;
+}
+.range-max:hover {
+  left: 237px;
+  top: -11px;
+  width: 22px;
+  height: 22px;
+  border-radius: 22px;
+  cursor: pointer;
+}
+.to-show {
+  order: 2;
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.to-show:hover {
+  color: #000000;
+  background-color: white;
+  cursor: pointer;
 }
 .inner-form:after {
   content:"";
@@ -558,19 +704,65 @@ form {
   clear: both;
 }
 .results-of-search {
-  width:inherit;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: inherit;
   height: 88px;
   background-color: white;
+  padding-left: 73px;
+  padding-right: 73px;
 }
-.quantity, .sort-of {
-  float: left;
+.sort-of {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.quantity, .pick-quality {
+  margin-right: 51px;
+  margin-left: 0px;
+}
+.sort-of a {
+  text-decoration: none;
+  border-bottom: 1px dashed #b4b4b4;
+  color: #b4b4b4;
+}
+.sort-of a:hover {
+  border-bottom: 1px dashed #81b3d2;
+  color: #81b3d2;
+}
+.sort-of a:focus {
+  border-bottom: 1px dashed #000000;
+  color: #000000;
+}
+.sort-of a:active {
+  border-bottom: none;
+  color: #81b3d2;
+}
+.arrow {
+  width: 14px;
+  heigth: 10px;
+  margin-left: 10px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+.arrow path{
+  margin: 0;
+  fill: #b4b4b4;
+}
+.arrow:hover path{
+  fill: black;
+}
+.arrow:active path,
+.arrow:focus path {
+  fill: #81b3d2;
 }
 .for-button {
-  float: right;
-}
-.pick-quality {
-  float: left;
-  margin-left: 10px;
+  margin-left: auto;
 }
 .result-of-choose {
   width: inherit;
@@ -578,91 +770,169 @@ form {
   background-color: white;
 }
 .listings-of-result {
+  width: inherit;
+  height: inherit;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: space-between;
   padding: 0;
+  padding-left: 73px;
+  padding-right: 73px;
+  margin: 0;
   list-style: none;
 }
 .information-about-hotel {
+  box-sizing: border-box;
   display: flex;
   flex-direct: row;
   justify-content: space-between;
+  align-items: flex-start;
+  height: 90px;
 }
 .details-about-hotel {
   display: flex;
   flex-direct: row;
   justify-content: space-between;
+  align-items: flex-start;
 }
-.aside-contener {
+.aside-container {
   display: table;
   width: 300px;
+  height: 90px;
+  margin-left: 30px;
+}
+.caption-of-table {
+  display: table-caption;
+  width: 258px;
+  height: 30px;
+  vertical-align: top;
+  font-size: 0;
 }
 .hotels-name {
-  display: table-caption;
+  margin: 0;
+  line-height: 14px;
+  font-size: 21px;
 }
-aside {
-  display: table-row;
+.hotels-name:hover {
+  color: #81b3d2;
+  cursor: pointer;
 }
-p, a {
+.hotels-name:focus {
+  color: #f2f2f2;
+}
+.first-column {
   display: table-cell;
+  width: 110px;
+  height: 30px;
+  margin-right: 6px;
 }
-
-
-
-
+.first-row span {
+  vertical-align: top;
+}
+.second-column {
+  display: table-cell;
+  width: 142px;
+  height: 30px;
+  padding-left: 6px;
+}
+.second-row span {
+  vertical-align: bottom;
+}
+.details {
+  display: block;
+  width: 110px;
+  line-height: 27px;
+  text-decoration: none;
+  text-align: center;
+}
+.details:hover {
+  background-color: #669ec0;
+}
+.details:active {
+  background-color: #5496bd;
+  color: #7baecc;
+}
+.booking {
+  display: block;
+  width: 142px;
+  height: 27px;
+  text-decoration: none;
+  line-height: 27px;
+  text-align: center;
+  margin: 0;
+}
+.booking:hover {
+  background-color: #604e43;
+}
+.booking:active {
+  background-color: #503e33;
+  color: #7b6d65;
+}
+.first-row p {
+  line-height: 14px;
+  margin: 0;
+}
+.stars {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 110px;
+  height: 90px;
+}
 .for-inner-form {
-  font-family: "PTSans", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 16px;
   color: #ffffff;
   text-transform: uppercase;
 }
-.column-for-form {
-  background-image: url("../img/checkbox-on.svg");
-  background-repeat: no-repeat;
-}
-.column-for-form, .min-cost, .max-cost {
-  font-family: "PTSans", "Arial", sans-serif;
-  font-weight: bold;
+.column-for-form, .min-cost, .max-cost, label[for="min-cost"], label[for="max-cost"], .to-show {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: normal;
   font-size: 14px;
   color: #ffffff;
   text-transform: uppercase;
 }
 .quantity {
-  font-family: "PTSans", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 21px;
   color: #000000;
   text-transform: uppercase;
 }
 .sort-of, .sort-of h3 {
-  font-family: "PTSans", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: normal;
   font-size: 12px;
   color: #000000;
   text-transform: uppercase;
 }
 .pick-quality {
-  font-family: "PTSans", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: lighter;
   font-size: 12px;
   color: #000000;
   text-transform: uppercase;
 }
 .hotels-name {
-  font-family: "PTSans", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 21px;
   color: #000000;
   text-transform: uppercase;
 }
 aside {
-  font-family: "PTSans", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: normal;
   font-size: 14px;
   color: #000000;
   text-transform: uppercase;
 }
 .details, .booking {
-  font-family: "PTSans", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 14px;
   color: #ffffff;
@@ -675,12 +945,17 @@ aside {
   background-color: #766357;
 }
 .rating {
-  font-family: "PTSans", "Arial", sans-serif;
+  width: 110px;
+  height: 27px;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 14px;
   color: #666666;
   text-transform: uppercase;
   background-color: #f2f2f2;
+  text-align: center;
+  line-height: 27px;
+  margin: 0;
 }
 
 /* Рабочее примечание. Ниже идут общие селекторы.*/
@@ -688,14 +963,14 @@ footer {
   background-color: #f2f2f2;
 }
 .hashteg-visitsedona {
-  font-family: "PTSans", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 21px;
   color: #000000;
   text-transform: uppercase;
 }
 .website {
-  font-family: "PTSans", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: normal;
   font-size: 14px;
   color: #000000;
