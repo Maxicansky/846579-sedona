@@ -19,24 +19,21 @@
        <li class="menu"><a class="navigation" href="#">Гостиницы</a></li>
       </ul>
     </nav>
-    <a href="#">
-        <img src="img/logo.svg" class="logo-sedona"   alt="Логотип Седона">
+    <a href="#" class="logo-sedona">
+      <img src="img/logo.svg" width="140" height="72" alt="Логотип Седона">
     </a>
     <article class="home-main-slogans">
       <h2 class="visually-hidden">Слоганы</h2>
       <p class="visually-hidden">Welcome to the gorgeous Sedona!Because the Grand Canyon sucks!</p>
       <img src="img/intro-welcome.svg" class="intro-welcome" width="459" height="353" alto="Горные виды Седоны со слоганом">
     </article>
-    <div class="polygon"></div>
-
   </header>
 
   <main class="home-main">
     <section class="features-preamble">
       <h3 class="visually-hidden">Несколько слов о Седоне</h3>
       <div class="why">
-        <p class="about-sedona base-reasons">Седона - небольшой городок в Аризоне,</p>
-        <p class="about-sedona base-reasons">заслуживающий большего!</p>
+        <p class="about-sedona base-reasons">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
         <p class="about-sedona reasons">Рассмотрим 5 причин по которым Седона круче, чем Гранд Каньон!</p>
       </div>
     </section>
@@ -96,32 +93,36 @@
         <h3 class="super-base-reasons">Заинтересовались?</h3>
         <p class="reasons">Укажите предполагаемые даты поездки,<br>и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
       </div>
-      <div class="call-of-form">
-        <a class="button-search-hotel white-text base-reasons" href="#">Поиск гостиницы в Седоне</a>
+      <div class="help-box">
+        <div class="brick"></div>
+        <div class="call-of-form">
+          <a class="button-search-hotel white-text base-reasons" href="#">Поиск гостиницы в Седоне</a>
+        </div>
+        <div class="brick"></div>
+        <form class="index-form" action="https://echo.htmlacademy.ru" method="get" name="home-application">
+          <div class="field-calendar">
+            <label for="date-of-entry">Дата заезда:</label>
+            <input type="text" class="date-of-entry" id="date-of-entry" name="date-of-entry" value="24 апреля 2017">
+          </div>
+          <div class="field-calendar">
+            <label for="date-of-exit">Дата выезда:</label>
+            <input type="text" class="date-of-exit" id="date-of-exit" name="date-of-exit" value="4 июня 2017">
+          </div>
+          <div class="field-adults">
+            <label for="adults">Взрослые:</label>
+            <button class="adults-minus" id="adults-minus" name="minus"><img src="img/minus.png" alt="Минусуй"></button>
+            <input type="text" class="quantity-of-adults" id="adults" name="quantity-of-adults" value="0">
+            <button class="adults-plus" id="adults-plus" name="plus"><img src="img/plus.png" alt="Плюсуй"></button>
+          </div>
+          <div class="field-kids">
+            <label for="kids">Дети:</label>
+            <button class="kids-minus" id="kids-minus" name="minus"><img src="img/minus.png" alt="Минусуй"></button>
+            <input type="text" class="quantity-of-kids" id="kids" name="quantity-of-kids" value="0">
+            <button class="kids-plus" id="kids-plus" name="plus"><img src="img/plus.png" alt="Плюсуй"></button>
+          </div>
+          <input type="submit" class="find base-reasons white-text" name="find" value="Найти">
+        </form>
       </div>
-      <form class="index-form" action="https://echo.htmlacademy.ru" method="get" name="home-application">
-        <div class="field-calendar">
-          <label for="date-of-entry">Дата заезда:</label>
-          <input type="text" class="date-of-entry" id="date-of-entry" name="date-of-entry" value="24 апреля 2017">
-        </div>
-        <div class="field-calendar">
-          <label for="date-of-exit">Дата выезда:</label>
-          <input type="text" class="date-of-exit" id="date-of-exit" name="date-of-exit" value="4 июня 2017">
-        </div>
-        <div class="field-adults">
-          <label for="adults">Взрослые:</label>
-          <button class="adults-minus" id="adults-minus" name="minus"><img src="img/minus.png" alt="Минусуй"></button>
-          <input type="text" class="quantity-of-adults" id="adults" name="quantity-of-adults" value="0">
-          <button class="adults-plus" id="adults-plus" name="plus"><img src="img/plus.png" alt="Плюсуй"></button>
-        </div>
-        <div class="field-kids">
-          <label for="kids">Дети:</label>
-          <button class="kids-minus" id="kids-minus" name="minus"><img src="img/minus.png" alt="Минусуй"></button>
-          <input type="text" class="quantity-of-kids" id="kids" name="quantity-of-kids" value="0">
-          <button class="kids-plus" id="kids-plus" name="plus"><img src="img/plus.png" alt="Плюсуй"></button>
-        </div>
-        <input type="submit" class="find base-reasons white-text" name="find" value="Найти">
-      </form>
     </section>
   </main>
 
