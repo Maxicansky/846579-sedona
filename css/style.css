@@ -3,6 +3,7 @@ body {
   font-weight: bold;
   font-size: 14px;
   color: #000000;
+  background-color: #f2f2f2;
 }
 img {
   max-width: 100%;
@@ -15,11 +16,12 @@ img {
   background-color: #7d9dc1;
   background-image: url("../img/background photo.jpg");
   background-repeat: no-repeat;
-  background-position: 0px -20px;
+  background-position: 0px -26px;
   background-size: 1200px 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
 }
 
 /* Блок для навигации однинаковый для index и inner*/
@@ -34,14 +36,14 @@ img {
   flex-direction: row;
   list-style: none;
   padding: 0 72px;
-  justify-content: space-between;
+  justify-content: flex-start;
   background-color: white;
   margin: 0;
 }
 .menu {
   display: flex;
   flex-direction: row;
-  width: 264px;
+  width: 240px;
   align-items: center;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -51,6 +53,9 @@ img {
 }
 .menu:nth-child(3), .menu:last-child  {
   justify-content: flex-end;
+}
+.menu:nth-child(3) {
+  margin-left: auto;
 }
 .navigation {
   font-family: "PT Sans", "Arial", sans-serif;
@@ -70,38 +75,39 @@ img {
   padding: 0;
 }
 .home-main-slogans {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 .home-header:after {
   content: "";
   width: inherit;
   height: 59px;
-  background-image: url("../img/polygon.svg");
+  background-image: url("../img/polygon.png");
   background-repeat: no-repeat;
-  background-size: 1201px 59px;
+  background-size: 1202px 59px;
   background-position: -1px 1px;
 }
 .home-main {
   width: 1200px;
+  margin: 0 auto;
 }
 .features-preamble {
   margin-top: 0;
   width: inherit;
-  height: 216px;
 }
 .why {
   display: flex;
   flex-direction: column;
   text-align: center;
   background-color: white;
-  padding: 56px 300px;
+  padding: 58px 300px;
+  padding-bottom: 53px;
   margin: 0px;
 }
 .about-sedona {
   margin: 0;
 }
 .about-sedona:first-child {
-  margin-bottom: 35px;
+  margin-bottom: 31px;
 }
 .first-feature, .second-feature {
   display: flex;
@@ -118,8 +124,8 @@ img {
   width: 400px;
   padding-right: 60px;
   padding-left: 60px;
-  padding-top: 45px;
-  padding-bottom: 60px;
+  padding-top: 48px;
+  padding-bottom: 57px;
 }
 .text-of-second-feature {
   padding-right: 40px;
@@ -128,11 +134,20 @@ img {
 .real-town, .diablo, .last-reasons{
   margin: 0;
 }
+.real-town.base-reasons {
+  margin: 0 40px;
+  line-height: 1;
+}
 .real-town.reasons {
   line-height: 1.6;
 }
 .diablo.reasons {
   line-height: 1.6;
+}
+.diablo.base-reasons {
+  margin-left: 45px;
+  margin-right: 45px;
+  line-height: 1;
 }
 .last-reasons.reasons {
   line-height: 1.6;
@@ -146,7 +161,7 @@ img {
   background-image: url("../img/flag-n-house.jpg");
   background-repeat: no-repeat;
   background-size: 800px 401px;
-  background-position: 0 -72px;
+  background-position: 0 -77px;
 }
 .bridge {
   width: 800px;
@@ -154,7 +169,7 @@ img {
   background-image: url("../img/bridge.jpg");
   background-repeat: no-repeat;
   background-size: 800px 401px;
-  background-position: 0 -72px;
+  background-position: 0 -77px;
 }
 .features-others {
   display: flex;
@@ -164,7 +179,8 @@ img {
   box-sizing: border-box;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  margin-bottom: 4px;
 }
 .others {
   display: flex;
@@ -195,7 +211,7 @@ img {
 }
 .points, .one-point {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 21px;
 }
 .features-sequel {
   display: flex;
@@ -205,7 +221,7 @@ img {
   width: 1200px;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
 }
 .feature-third-type {
   display: flex;
@@ -215,7 +231,7 @@ img {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  padding-top: 54px;
+  padding-top: 47px;
   padding-bottom: 61px;
   padding-right: 60px;
   padding-left: 60px;
@@ -224,6 +240,13 @@ img {
 .feature-third-type:last-child {
   padding-right: 70px;
   padding-left: 70px;
+}
+.last-reasons.base-reasons {
+  line-height: 1;
+  margin-bottom: 11px;
+}
+.last-reasons.reasons {
+  margin-top: 8px;
 }
 .final {
   display: flex;
@@ -237,6 +260,7 @@ img {
   background-size: 1718px 748px;
   background-position: -259px 137px;
   padding-bottom: 473px;
+  margin: 0 auto;
 }
 .interested {
   box-sizing: border-box;
@@ -247,8 +271,8 @@ img {
   align-items: center;
   text-align: center;
   background-color: white;
-  padding-top: 51px;
-  padding-bottom: 52px;
+  padding-top: 45px;
+  padding-bottom: 48px;
 }
 .interested>.reasons {
   margin: 0;
@@ -256,7 +280,7 @@ img {
 }
 .super-base-reasons {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 27px;
 }
 .help-box {
   position: relative;
@@ -348,14 +372,18 @@ img {
 }
 .field-adults, .field-kids {
   display: flex;
-  margin-bottom: 29px;
+  margin-bottom: 54px;
   line-height: 38px;
 }
 label[for="date-of-entry"], label[for="date-of-entry"] {
   font-size: 14px;
 }
-label[for="kids"], label[for="adults"] {
-  margin-right: 25px;
+label[for="kids"]  {
+  margin-right: 27px;
+  font-size: 14px;
+}
+label[for="adults"] {
+  margin-right: 40px;
   font-size: 14px;
 }
 .quantity-of-adults, .quantity-of-kids {
@@ -403,8 +431,9 @@ label[for="kids"], label[for="adults"] {
   justify-content: space-around;
   text-align: center;
   align-items: center;
-  padding-top: 36px;
+  padding-top: 26px;
   padding-bottom: 36px;
+  margin: 0 auto;
 }
 .hashteg, .footer-social, .footer-copyright {
   width: 220px;
@@ -417,7 +446,7 @@ label[for="kids"], label[for="adults"] {
 .footer-social ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -426,9 +455,9 @@ label[for="kids"], label[for="adults"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 10px;
-  width: 48px;
-  height: 48px;
+  margin-right: 5px;
+  width: 47px;
+  height: 47px;
   background-color: #5496bd;
 }
 .social-button a {
@@ -463,6 +492,9 @@ label[for="kids"], label[for="adults"] {
 }
 .html-image {
   background-color: inherit;
+}
+.into-the-academy {
+  background-color: #f9fbf6;
 }
 .into-the-academy:hover path {
   fill: #81b3d2;
@@ -514,10 +546,16 @@ form {
 }
 
 /* Рабочее примечание. Ниже селекторы для inner.html */
-.inner {
+.inner-header {
   position: relative;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  margin: 0 auto;
 }
-.inner:after {
+.inner-header:after {
   content: "";
   display: block;
   position: absolute;
@@ -529,17 +567,10 @@ form {
   top: 0;
   z-index: -1;
 }
-.inner-header {
-  width: 1200px;
-  height: 72px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: transparent;
-}
 .main-inner {
   width: 1200px;
   background-color: transparent;
+  margin: 0 auto;
 }
 .inner-form {
   display: flex;
@@ -556,19 +587,19 @@ form {
   flex-direction: column;
   justify-content: flex-start;
   align-items: right;
-  width: 256px;
+  width: 254px;
   margin: 0;
   padding:0;
   border: none;
 }
 .for-inner-form {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 .column-for-form {
-  margin-bottom: 23px;
+  margin-bottom: 19px;
 }
 .column-for-form:last-child {
-  margin-bottom: 31px;
+  margin-bottom: 29px;
 }
 .for-inner-form {
   margin-left: 0;
@@ -587,7 +618,11 @@ form {
   background-image: url("../img/checkbox-off.png");
   background-repeat: no-repeat;
   background-size: 90%;
-  margin-right: 13px;
+  background-position: 0 1px;
+  margin-right: 12px;
+}
+.type-of-housing label:before {
+  margin-right: 15px;
 }
 .column-for-form input:checked + label:before {
   content: "";
@@ -598,15 +633,15 @@ form {
   cursor: pointer;
 }
 .cost-of-day {
-  width: 340px;
+  width: 312px;
   margin-left: auto;
   border: none;
 }
 .cost-of-day .for-inner-form {
-  margin-bottom: 9px;
+  margin-bottom: 12px;
 }
 .from-and-to {
-  width: 340px;
+  width: 312px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -659,7 +694,7 @@ form {
   position: absolute;
   content: "";
   height: 2px;
-  width: 248px;
+  width: 250px;
   background-color: white;
 }
 .range-min, .range-max {
@@ -686,7 +721,7 @@ form {
 }
 .range-max {
   top: -10px;
-  left: 238px;
+  left: 252px;
 }
 .range-min:hover {
   left: -1px;
@@ -707,8 +742,10 @@ form {
 .to-show {
   order: 2;
   display: block;
+  box-sizing: border-box;
   margin: 0 auto;
-  padding: 6px 35px;
+  margin-left: 85px;
+  padding: 6px 33px;
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
@@ -733,14 +770,14 @@ form {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   width: inherit;
   background-color: white;
   padding-left: 73px;
   padding-right: 73px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 .sort-of {
   display: flex;
@@ -748,8 +785,20 @@ form {
   justify-content: flex-start;
   align-items: center;
 }
-.quantity, .pick-quality {
-  margin-right: 51px;
+.quantity {
+  margin-right: 48px;
+  margin-left: 0px;
+}
+.pick-quality:first-child {
+  margin-right: 40px;
+  margin-left: 0px;
+}
+.pick-quality:nth-child(2) {
+  margin-right: 30px;
+  margin-left: 0px;
+}
+.pick-quality:nth-child(3) {
+  margin-right: 33px;
   margin-left: 0px;
 }
 .sort-of a {
@@ -772,7 +821,7 @@ form {
 .arrow {
   width: 14px;
   heigth: 10px;
-  margin-left: 10px;
+  margin-left: 7px;
   border: none;
   background-color: transparent;
   padding: 0;
@@ -814,8 +863,8 @@ form {
   justify-content: space-between;
   align-items: flex-start;
   border-top: 1px solid #e5e5e5;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 32px;
+  padding-bottom: 28px;
   padding-left: 73px;
   padding-right: 73px;
 
@@ -991,7 +1040,7 @@ aside {
 
 /* Рабочее примечание. Ниже идут общие селекторы.*/
 footer {
-  background-color: #f2f2f2;
+  background-color: #f9fbf6;
 }
 .hashteg-visitsedona {
   font-family: "PT Sans", "Arial", sans-serif;
