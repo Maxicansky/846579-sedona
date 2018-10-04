@@ -25,11 +25,16 @@ img {
 }
 
 /* Блок для навигации однинаковый для index и inner*/
-.home-navigation, .inner-navigation {
+.home-navigation {
   width: inherit;
   padding-bottom: 16px;
   background-color: transparent;
   margin-bottom: 61px;
+}
+.inner-navigation {
+  width: inherit;
+  padding-bottom: 16px;
+  background-color: transparent;
 }
 .site-navigation {
   display: flex;
